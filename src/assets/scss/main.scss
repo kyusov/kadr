@@ -1,0 +1,52 @@
+@import './normalize';
+@import './components/header';
+
+@font-face {
+  font-family: 'Axiforma';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Axiforma-Regular.woff') format('woff'),
+    url('../fonts/Axiforma-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Axiforma-Bold.woff') format('woff'),
+    url('../fonts/Axiforma-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/Axiforma-Black.woff') format('woff'),
+    url('../fonts/Axiforma-Black.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Axiforma', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1921px) {
+  :root {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  :root {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  :root {
+    font-size: 16px;
+  }
+}

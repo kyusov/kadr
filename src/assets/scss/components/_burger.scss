@@ -1,0 +1,21 @@
+.burger {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    position: absolute;
+    content: '';
+    width: 27px;
+    height: 2px;
+    display: block;
+    background-color: $color-main;
+    @for $i from 2 through 3 {
+      &:nth-child(#{$i}) {
+        top: calc(#{$i - 1} * -7px);
+      }
+    }
+  }
+}
