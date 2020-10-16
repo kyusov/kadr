@@ -1,0 +1,99 @@
+.team {
+    background-color: $color-main;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 75.25rem;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        line-height: 3.813rem;
+        text-transform: uppercase;
+        color: $color-text-white;
+        
+        padding-top: 2.063rem;
+        padding-left: 1.625rem;
+    }
+
+    &__text {
+        margin-top: 4.375rem;
+        margin-left: 4.563rem;
+        p {
+            color: $color-text-white;
+            font-size: 1.25rem;
+            line-height: 1.813rem;
+            
+        }
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__right {
+        width: 55%;
+    }
+
+    &__left {
+        width: 45%;
+    }
+
+    .right-content {
+        &__images{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 4.375rem;
+            margin-right: 1.25rem;
+        }
+
+        &__image-bottom {
+            position: relative;
+            box-shadow: 0.375rem 0.375rem 1.25rem rgba(0, 0, 0, 0.25);
+            border-radius: 1.25rem;
+        }
+
+        &__image-top {
+            position: relative;
+            z-index: 2;
+            top: -8.75rem;
+            right: 7.625rem;
+            box-shadow: 0.375rem 0.375rem 1.25rem rgba(0, 0, 0, 0.25);
+            border-radius: 1.25rem;
+        }
+
+    }
+
+    &__button {
+        color: $color-text-white;
+        background-color: $color-main;
+        border: $button-border;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.875rem;
+        border-radius: 1.25rem;
+        padding: 0.688rem 2.625rem;
+        margin-top: 5rem;
+        box-shadow: $button-shadow;
+
+        transition: color 0.4s ease, background-color 0.4s ease;
+
+        &:hover {
+            cursor: pointer;
+            transition: color 0.4s ease, background-color 0.4s ease;
+
+            color: $color-main;
+            background-color: $color-default-btn;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .team {
+        margin-top: 8.75rem;
+    }
+}

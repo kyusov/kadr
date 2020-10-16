@@ -1,13 +1,20 @@
 @import '../settings';
-@import './burger';
 
 .header {
-  width: 100%;
   height: 3.125rem;
 
-  margin: 1.875rem 1.25rem 0 1.25rem;
+  margin: 0 8.563rem 0 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 0.625rem;
+
+  position: relative;
+  z-index: 4;
+  background-color: $color-bg-white;
+  
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  max-width: 90rem;
 
   svg {
     height: 100%;
@@ -25,10 +32,15 @@
 
   &__logo {
     height: inherit;
+    display: flex;
+    svg {
+      width: 11.5rem;
+    }
   }
 
   &__navigation {
     width: 100%;
+    margin: 0 2.375rem 0 3.313rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,14 +58,10 @@
   }
 
   &-contacts {
+    justify-content: flex-end;
     svg {
       width: 1.125rem;
       margin-right: 0.625rem;
     }
-  }
-
-  &__burger {
-    width: 2.75rem;
-    height: inherit;
   }
 }

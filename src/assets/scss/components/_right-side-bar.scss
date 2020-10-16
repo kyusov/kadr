@@ -1,0 +1,135 @@
+$border-burger: 0.125rem solid $color-main;
+
+.sidebar {
+  position: fixed;
+  width: 7.375rem;
+  height: 100vh;
+  border-left: 0.063rem solid $color-main;
+
+  background-color: $color-bg-white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  top: 0;
+  right: 0;
+  z-index: 5;
+
+  &__burger {
+    height: 3.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .burger {
+      position: relative;
+      top: 2rem;
+
+      width: 2.75rem;
+      height: 2.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: $border-burger;
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      span {
+        position: absolute;
+        content: '';
+        width: 1.688rem;
+        height: 0.125rem;
+        display: block;
+        background-color: $color-main;
+        &:first-child {
+          margin-bottom: 0.875rem;
+        }
+        &:last-child {
+          margin-top: 0.875rem;
+        }
+      }
+    }
+  }
+
+  &__request {
+    width: 5.438rem;
+    height: 5.438rem;
+    background-color: $color-main;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    color: $color-text-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation-play-state: paused;
+
+
+    &:hover {
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      margin: 0;
+      height: 2.125rem;
+    }
+  }
+
+  &__arrow-top {
+    margin-bottom: 6.875rem;
+    svg {
+      height: 2.75rem;
+      width: 2.75rem;
+    }
+
+    .arrow-use path {
+      animation: arrow-top 2s linear infinite;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes arrow-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
