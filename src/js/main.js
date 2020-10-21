@@ -2,7 +2,7 @@ import { Swiper, Pagination } from 'swiper'
 
 Swiper.use([Pagination])
 
-new Swiper('.swiper-container', {
+new Swiper('.swiper-events', {
   loop: true,
   updateOnWindowResize: true,
   speed: 400,
@@ -13,4 +13,11 @@ new Swiper('.swiper-container', {
     type: 'bullets',
     clickable: true,
   },
+})
+
+new Swiper('.partners-swiper', {
+  direction: 'vertical',
+  slidesPerView: 2,
+  updateOnWindowResize: true,
+  speed: 400,
 })
