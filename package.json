@@ -13,6 +13,7 @@
   "author": "Kirill Yusov",
   "license": "ISC",
   "dependencies": {
+    "2gis-maps": "^3.6.1",
     "swiper": "^6.3.4"
   },
   "devDependencies": {

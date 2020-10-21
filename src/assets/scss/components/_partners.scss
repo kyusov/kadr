@@ -57,7 +57,32 @@
 
   &__right {
     overflow-y: hidden;
+    position: relative;
     height: 56.25rem;
+  }
+
+  &__gradient-bottom, &__gradient-top {
+    position: absolute;
+    width: 100%;
+    height: 8.625rem;
+  }
+
+  &__gradient-bottom {
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(212, 15, 20, 1) 100%
+    );
+  }
+
+  &__gradient-top {
+    top: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(212, 15, 20, 1) 100%
+    );
   }
 
   &-swiper {
@@ -74,6 +99,23 @@
       min-height: 33.375rem;
     }
 
+    .swiper-button-next {
+      width: 6.25rem;
+      height: 6.25rem;
+      background-image: url('../img/sprite.svg#arrow-next-slide');
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 1;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
     &__avatar {
       width: 12.5rem;
       height: 12.5rem;
@@ -81,7 +123,8 @@
       object-fit: cover;
     }
 
-    &__title, &__subtitle {
+    &__title,
+    &__subtitle {
       max-width: 21rem;
     }
 
@@ -99,6 +142,7 @@
       font-size: 1.5rem;
       font-weight: 400;
       line-height: 2.375rem;
+      max-width: 20rem;
     }
 
     &__info {

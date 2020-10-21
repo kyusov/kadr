@@ -54,12 +54,12 @@
             <div class="about__left left-content">
                 <div class="left-content__images">
                     <picture class="left-content__image">
-                        <source srcset="/img/office-picture.webp" media="(min-width: 1440px)">
-                        <img class="left-content__image-bottom" src="/img/office-picture.webp" alt="office">
+                        <source srcset="img/office-picture.webp" media="(min-width: 1440px)">
+                        <img class="left-content__image-bottom" src="img/office-picture.webp" alt="office">
                     </picture>
                     <picture class="left-content__image">
-                        <source srcset="/img/office-picture-1.webp" media="(min-width: 1440px)">
-                        <img class="left-content__image-top" src="/img/office-picture-1.webp" alt="office">
+                        <source srcset="img/office-picture-1.webp" media="(min-width: 1440px)">
+                        <img class="left-content__image-top" src="img/office-picture-1.webp" alt="office">
                     </picture>
                 </div>
             </div>
@@ -96,12 +96,12 @@
             <div class="team__right">
                 <div class="right-content__images">
                     <picture class="right-content__image">
-                        <source srcset="/img/team.webp" media="(min-width: 1440px)">
-                        <img class="right-content__image-bottom" src="/img/team.webp" alt="office">
+                        <source srcset="img/team.webp" media="(min-width: 1440px)">
+                        <img class="right-content__image-bottom" src="img/team.webp" alt="office">
                     </picture>
                     <picture class="right-content__image">
-                        <source srcset="/img/office-picture-1.webp" media="(min-width: 1440px)">
-                        <img class="right-content__image-top" src="/img/office-picture-1.webp" alt="office">
+                        <source srcset="img/office-picture-1.webp" media="(min-width: 1440px)">
+                        <img class="right-content__image-top" src="img/office-picture-1.webp" alt="office">
                     </picture>
                 </div>
             </div>
@@ -265,21 +265,118 @@
                                 работодателем и соискателем.
                             </div>
                         </div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(min-width: 1440)" srcset="img/avatar2" type="image/webp">
+                                <img src="img/avatar2.webp" alt="Генеральный директор" class="partners-swiper__avatar">
+                            </picture>
+                            <h3 class="partners-swiper__title">
+                                Петров Петр
+                            </h3>
+                            <p class="partners-swiper__subtitle">
+                                Заместитель генерального директора ООО ”Блаблабла”
+                            </p>
+                            <div class="partners-swiper__info">
+                                Коллектив «Кадрового центра» состоит из неравнодушных к своей профессии людей. Мы чётко
+                                осознаём нашу роль в развитии Иркутского рынка труда и взаимоотношений между
+                                работодателем и соискателем.
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(min-width: 1440)" srcset="img/avatar1" type="image/webp">
+                                <img src="img/avatar1.webp" alt="Генеральный директор" class="partners-swiper__avatar">
+                            </picture>
+                            <h3 class="partners-swiper__title">
+                                Константинов Константин
+                            </h3>
+                            <p class="partners-swiper__subtitle">
+                                Генеральный директор ООО ”Блаблабла”
+                            </p>
+                            <div class="partners-swiper__info">
+                                Коллектив «Кадрового центра» состоит из неравнодушных к своей профессии людей. Мы чётко
+                                осознаём нашу роль в развитии Иркутского рынка труда и взаимоотношений между
+                                работодателем и соискателем.
+                            </div>
+                        </div>
                     </div>
 
                     <!-- If we need navigation buttons -->
                     <!-- <div class="swiper-button-prev"></div> -->
                     <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
                 </div>
+                <div class="partners__gradient-top"></div>
+                <div class="partners__gradient-bottom"></div>
             </div>
         </div>
     </div>
 </div>
+    <footer class="contacts">
+    <div class="contacts__wrapper">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__content">
+            <div class="contacts__left">
+                <div class="contacts__info">
+                    <address class="contacts__address">Чехова 23, Иркутск</address>
+                    <a class="contacts__phone" href="tel:+7(3952)48-99-00">+7 (3952) 48-99-00</a>
+                    <a class="contacts__email" href="mailto:info@kadr-center.ru">info@kadr-center.ru</a>
+                </div>
+                <div class="contacts__map" id="map-contacts"></div>
+            </div>
+            <div class="contacts__right">
+                <from class="contacts__form form">
+                    <label class="form__name" for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name" placeholder="Константин Константинов">
+                    <label class="form__email" for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email@yandex.ru">
+                    <label class="form__message" for="message">Сообщение</label>
+                    <textarea name="message" id="message" rows="3" placeholder="Введите текст"></textarea>
+                    <label class="form__distribution">
+                        <input type="checkbox" name="distribution" id="distribution">
+                        <span>Подписаться на  рассылку анонсов мероприятий</span>
+                    </label>
+                    <label class="form__consent">
+                        <input type="checkbox" name="consent" id="consent">
+                        <span>Я согласен на<a href="#">Обработку персональных данных</a></span>
+                    </label>
+                    <div class="form__submit">
+                        <button type="submit">Отправить</button>
+                    </div>
+                </from>
+            </div>
+        </div>
+        <div class="contacts__links links">
+            <div class="links__column">
+                <div class="links__row">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="links__link">Работодатель</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="links__link">Мероприятия</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="links__link">О нас</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="links__link">Нам доверяют</a>
+                </div>
+                <div class="links__row">
+                    <a href="#" class="links__link">Соискатель</a>
+                    <a href="#" class="links__link">Карьера у нас</a>
+                    <a href="#" class="links__link">Команда</a>
+                    <a href="#" class="links__link">Контакты</a>
+                </div>
+            </div>
+            <div class="links__column">
+                <div class="links__social social">
+                    <a href="#" class="social-ut">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#social-youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-inst">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#social-inst"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
     <div class="left-side-bar"></div>
     <div class="sidebar">
     <div class="sidebar__burger">
