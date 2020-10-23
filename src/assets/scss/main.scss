@@ -7,6 +7,7 @@
 @import './components/left-side-bar';
 @import './components/slider';
 @import './components/partners';
+@import './components/contacts';
 
 @font-face {
   font-family: 'Axiforma';
@@ -46,6 +47,12 @@ h3,
 h4,
 p {
   margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 source {
