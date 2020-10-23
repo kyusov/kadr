@@ -1,6 +1,6 @@
 .contacts {
   &__wrapper {
-    width: calc(100% - 14.75rem);
+    width: calc(100% - 9rem);
     margin: 0 auto 5.25rem auto;
   }
 
@@ -12,13 +12,18 @@
     text-transform: uppercase;
 
     margin-top: 2.063rem;
-    margin-left: 1.125rem;
+    // margin-left: 1.125rem;
+    margin: 2.063rem auto 0 auto;
+
+    width: calc(100% - 9rem);
   }
 
   &__content {
     display: flex;
     color: $color-text;
-    margin-top: 4.375rem;
+
+    width: calc(100% - 9rem);
+    margin: 4.375rem auto 0 auto;
   }
 
   &__left,
@@ -29,7 +34,6 @@
   &__left {
     display: flex;
     flex-direction: column;
-    margin-left: 1.313rem;
   }
 
   &__info {
@@ -98,7 +102,7 @@
       height: 100%;
       max-height: 9.125rem;
       resize: none;
-        background: url('../img/black-line.png') 0 -0.188rem;
+      background: url('../img/black-line.png') 0 -0.188rem;
       outline: 0;
       border: none;
     }
@@ -186,8 +190,9 @@
 
   &__links {
     display: flex;
-    margin-top: 4.688rem;
-    margin-left: 1.125rem;
+    margin: 4.688rem auto 0 auto;
+    // margin-left: 1.125rem;
+    width: calc(100% - 9rem);
   }
 
   .links {
