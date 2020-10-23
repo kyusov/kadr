@@ -78,7 +78,7 @@ const styles = () => {
 }
 
 const htmlInclude = () => {
-  return src(['./src/index.html'])
+  return src('./src/*.html')
     .pipe(
       fileInclude({
         prefix: '@',
@@ -141,7 +141,7 @@ const watchFiles = () => {
   })
 
   watch('./src/assets/scss/**/*.scss', styles)
-  watch(['./src/components/*.html', './src/index.html'], htmlInclude)
+  watch(['./src/components/**/*.html', './src/*.html'], htmlInclude)
   watch(
     [
       './src/assets/img/**.jpg',
