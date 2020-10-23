@@ -106,3 +106,10 @@ source {
     transition: font-size .3s ease;
   }
 }
+
+@media screen and (max-width: 320px) {
+  :root {
+    font-size: 12px;
+    transition: font-size .3s ease;
+  }
+}

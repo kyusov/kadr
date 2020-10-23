@@ -249,6 +249,15 @@ $border-burger: 0.125rem solid $color-main;
   }
 }
 
+.center-line {
+  position: fixed;
+  z-index: -2;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  border-right: 0.063rem solid $color-main;
+}
+
 @keyframes arrow-top {
   0% {
     transform: translateY(0);
