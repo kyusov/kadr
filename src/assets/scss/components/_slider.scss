@@ -1,8 +1,11 @@
 .slider {
+  z-index: 1;
+  background-color: $color-bg-white;
   &__wrapper {
     // max-width: 72.25rem;
     width: calc(100% - 14.75rem);
-    margin: 6.5rem auto 6.75rem auto;
+    margin: 0 auto;
+    padding: 6.5rem 0;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
