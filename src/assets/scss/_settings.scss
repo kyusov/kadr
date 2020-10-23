@@ -1,4 +1,4 @@
-$color-main: #D40F14;
+$color-main: #d40f14;
 $color-text: #111;
 $color-text-white: #fff;
 
@@ -7,9 +7,37 @@ $color-bg-white: #fff;
 $color-checkbox: #111;
 $color-placeholder: #4d4d4d;
 
-$color-main-btn: #D40F14;
+$color-main-btn: #d40f14;
 $color-default-btn: #fff;
 
 $button-main-border: 0.25rem solid $color-main-btn;
 $button-border: 0.25rem solid $color-default-btn;
 $button-shadow: 0.188rem 0.188rem 0.938rem #00000033;
+
+body {
+  font-family: 'Axiforma', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+source {
+  width: 0;
+  height: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}

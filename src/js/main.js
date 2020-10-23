@@ -71,7 +71,7 @@ for (let i = 0; i < spans.length; i++) {
 
 /// burger
 
-const burgerHandler = (sropdown, event) => {
+const burgerHandler = (dropdown, event) => {
   const parent = event.target.classList.contains('burger')
     ? event.target
     : event.target.parentElement
@@ -118,3 +118,21 @@ const dropdown = document.querySelector('.dropdown')
 burger.addEventListener('click', burgerHandler.bind(this, dropdown))
 
 /// burger end
+
+
+/// gifs
+
+const gifs = [...document.querySelectorAll('.aspirant-info__titles > img')]
+const titles = [...document.querySelectorAll('.aspirant-info__titles > h3')]
+
+for (let i = 0; i < titles.length; i++) {
+  titles[i].addEventListener('mouseenter', () => {
+    titles[i].classList.toggle('active')
+    gifs[i].classList.toggle('active')
+  })
+  
+  titles[i].addEventListener('mouseleave', () => {
+    titles[i].classList.toggle('active')
+    gifs[i].classList.toggle('active')
+  })
+}

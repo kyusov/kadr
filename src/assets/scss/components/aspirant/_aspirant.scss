@@ -1,0 +1,143 @@
+.aspirant-info {
+  &__wrapper {
+    width: calc(100% - 14.75rem);
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $color-main;
+    font-size: 4rem;
+    line-height: 6.583rem;
+    margin-top: 10.583rem;
+    padding-left: 1.25rem;
+  }
+
+  &__block-left,
+  &__block-right {
+    width: 50%;
+  }
+
+  &__titles {
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 4.938rem;
+
+    padding-left: 1.25rem;
+
+    :not(:first-child) {
+      margin-top: 2.125rem;
+    }
+
+    color: $color-text-white;
+    -webkit-text-stroke: 0.125rem $color-main;
+
+    img {
+      position: absolute;
+      width: 26.563rem;
+      opacity: 0;
+      z-index: -1;
+
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      transition: opacity 0.3s ease;
+
+      &.active {
+        z-index: 1;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item {
+    transition: color 0.4s ease;
+    z-index: 0;
+
+    &.active {
+      z-index: 2;
+    }
+
+    &:hover {
+      transition: color 0.4s ease;
+      cursor: pointer;
+      color: $color-main;
+    }
+  }
+
+  &__description {
+    margin-top: 1.875rem;
+    padding-left: 1.25rem;
+    max-width: 28.625rem;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  &__buttons {
+    margin-top: 6.75rem;
+    padding-left: 1.25rem;
+  }
+
+  &__worksheet,
+  &__summary {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+
+    padding: 0.688rem 1.563rem;
+
+    border: none;
+    border-radius: 1.25rem;
+    box-shadow: $button-shadow;
+
+    outline: none;
+
+    transition: color 0.4s ease, background-color 0.4s ease;
+
+    &:hover {
+      transition: color 0.4s ease, background-color 0.4s ease;
+      cursor: pointer;
+    }
+  }
+
+  &__worksheet {
+    margin-right: 1rem;
+    color: $color-text-white;
+    background-color: $color-main;
+    border: $button-main-border;
+
+    &:hover {
+      color: $color-main;
+      background-color: $color-default-btn;
+    }
+  }
+
+  &__summary {
+    color: $color-main;
+    background-color: $color-default-btn;
+    border: $button-main-border;
+
+    &:hover {
+      color: $color-text-white;
+      background-color: $color-main;
+      border-color: $color-default-btn;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+    :root {
+        font-size: 14px;
+    }
+}
