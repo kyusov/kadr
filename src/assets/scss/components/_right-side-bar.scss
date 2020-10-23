@@ -153,8 +153,10 @@ $border-burger: 0.125rem solid $color-main;
   &__menu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 80%;
+
 
     margin-top: 2.875rem;
   }

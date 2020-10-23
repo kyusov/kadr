@@ -68,7 +68,7 @@
   }
 
   &__gradient-bottom {
-    bottom: 0;
+    bottom: -1px;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
@@ -77,7 +77,7 @@
   }
 
   &__gradient-top {
-    top: 0;
+    top: -1px;
     background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0) 0%,
