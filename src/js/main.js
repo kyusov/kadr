@@ -82,7 +82,8 @@ const burgerHandler = (dropdown, event) => {
     parent.classList.toggle('active')
 
     dropdown.style.transform = 'translateY(0)'
- 
+    document.body.style.overflowY = 'hidden'
+
     spans.map((e) => {
       e.style.margin = 0
       e.style.backgroundColor = 'white'
@@ -97,7 +98,8 @@ const burgerHandler = (dropdown, event) => {
   } else {
     parent.classList.toggle('active')
 
-    dropdown.style.transform = 'translateY(-150%)'
+    dropdown.style.transform = 'translateY(-250%)'
+    document.body.style.overflowY = 'unset'
 
     spans.map((e) => (e.style.backgroundColor = '#D40F14'))
 
@@ -119,20 +121,27 @@ burger.addEventListener('click', burgerHandler.bind(this, dropdown))
 
 /// burger end
 
-
 /// gifs
 
-const gifs = [...document.querySelectorAll('.aspirant-info__titles > img')]
-const titles = [...document.querySelectorAll('.aspirant-info__titles > h3')]
+const gifs = [
+  ...document.querySelectorAll('.aspirant-info__titles > img'),
+  ...document.querySelectorAll('.employer-info__titles > img'),
+]
+const titles = [
+  ...document.querySelectorAll('.aspirant-info__titles > h3'),
+  ...document.querySelectorAll('.employer-info__titles > h3'),
+]
 
 for (let i = 0; i < titles.length; i++) {
   titles[i].addEventListener('mouseenter', () => {
     titles[i].classList.toggle('active')
     gifs[i].classList.toggle('active')
   })
-  
+
   titles[i].addEventListener('mouseleave', () => {
     titles[i].classList.toggle('active')
     gifs[i].classList.toggle('active')
   })
 }
+
+/// gifs end

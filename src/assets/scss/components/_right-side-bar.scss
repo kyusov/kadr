@@ -77,7 +77,7 @@ $border-burger: 0.125rem solid $color-main;
   top: 0;
   right: 0;
   // background-color: white;
-  z-index: 20;
+  z-index: 52;
 
   .burger {
     position: fixed;
@@ -131,7 +131,7 @@ $border-burger: 0.125rem solid $color-main;
   transform: translateY(-250%);
   transition: transform 0.4s ease-in-out;
 
-  z-index: 15;
+  z-index: 51;
 
   &.down {
     transform: translateY(0);
@@ -251,7 +251,7 @@ $border-burger: 0.125rem solid $color-main;
 
 .center-line {
   position: fixed;
-  z-index: -2;
+  z-index: -4;
   height: 100vh;
   top: 0;
   left: 50%;
