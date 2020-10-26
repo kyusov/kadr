@@ -122,8 +122,8 @@ burger.addEventListener('click', burgerHandler.bind(this, dropdown))
 
 /// gifs
 
-const gifs = [...document.querySelectorAll('.aspirant-info__titles > img')]
-const titles = [...document.querySelectorAll('.aspirant-info__titles > h3')]
+const gifs = [...document.querySelectorAll('.aspirant-info__titles > img'), ...document.querySelectorAll('.employer-info__titles > img')]
+const titles = [...document.querySelectorAll('.aspirant-info__titles > h3'), ...document.querySelectorAll('.employer-info__titles > h3')]
 
 for (let i = 0; i < titles.length; i++) {
   titles[i].addEventListener('mouseenter', () => {
