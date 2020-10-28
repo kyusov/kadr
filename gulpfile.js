@@ -99,12 +99,16 @@ const imgToApp = () => {
 }
 
 const scripts = () => {
-  return src('./src/js/main.js')
+  return src('./src/js/**/*.js')
     .pipe(
       webpackStream({
         mode: 'development',
+        entry: {
+          'main': './src/js/main.js',
+          'calendar': './src/js/calendar.js',
+        },
         output: {
-          filename: 'main.js',
+          filename: '[name].js',
         },
         module: {
           rules: [

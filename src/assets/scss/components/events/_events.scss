@@ -1,0 +1,226 @@
+.calendar {
+  &__wrapper {
+    width: calc(100% - 14.75rem);
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__tbody {
+    td {
+      position: relative;
+      user-select: none;
+
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.813rem;
+
+      padding: 0.625rem 0.625rem;
+      text-align: center;
+
+      &.prevMonth,
+      &.nextMonth {
+        color: #707070;
+      }
+
+      &.active {
+        &:hover {
+          span {
+            background-color: $color-main;
+          }
+          color: white;
+          cursor: pointer;
+        }
+        span {
+          position: absolute;
+          content: '';
+          width: 1.65rem;
+          height: 1.65rem;
+          border: 1px solid $color-main;
+          border-radius: 50%;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -45%);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4.938rem;
+    text-transform: uppercase;
+    color: $color-main;
+    padding-left: 1.188rem;
+  }
+
+  &__container {
+    padding-left: 1.25rem;
+    margin-top: 1.875rem;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    max-width: 23.5rem;
+  }
+
+  &__table {
+    margin-top: 1.063rem;
+    width: 100%;
+    max-width: 23.5rem;
+  }
+
+  &__prev,
+  &__next,
+  &__current {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+
+    outline: none;
+
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $color-text-white;
+    -webkit-text-stroke: 0.063rem $color-main;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__current {
+    font-size: 2.25rem;
+    -webkit-text-stroke: none;
+    color: $color-main;
+  }
+
+  .filter {
+    padding-left: 1.313rem;
+    margin-top: 1.063rem;
+
+    &__title,
+    &__item {
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.875rem;
+      color: $color-text;
+    }
+
+    &__controls {
+      margin-top: 0.813rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 23.5rem;
+    }
+
+    &__item {
+      font-weight: 500;
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__left {
+    margin-top: 3.75rem;
+    width: 50%;
+  }
+
+  &__right {
+    width: 50%;
+    overflow-y: hidden;
+    height: 38.5rem;
+    margin-top: 8.75rem;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-slide {
+    margin-left: 1.438rem;
+
+    &__content-wrapper {
+      &:not(:first-child) {
+        margin-top: 3.125rem;
+      }
+
+      &:first-child {
+        margin-top: 0.313rem;
+      }
+    }
+
+    &__wrapper {
+      max-height: 18rem;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+      line-height: 3.688rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $color-main;
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-transform: uppercase;
+      color: $color-text-white;
+      -webkit-text-stroke: 0.063rem $color-main;
+    }
+
+    &__text {
+      font-size: 1.25rem;
+      line-height: 1.625rem;
+
+      max-width: 35.5rem;
+
+      margin-top: 0.938rem;
+    }
+
+    &__button-wrapper {
+      margin-top: 1.25rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      svg {
+        width: 3.25rem;
+        height: 100%;
+        margin-right: 1.188rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__button {
+      border: 0.125rem solid $color-main;
+      box-shadow: $button-shadow;
+      background-color: $color-main;
+
+      color: $color-text-white;
+
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+
+      padding: 0.688rem 3.375rem;
+
+      border-radius: 1.25rem;
+
+      margin-right: 2rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

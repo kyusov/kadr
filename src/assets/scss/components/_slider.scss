@@ -171,6 +171,8 @@
   &__button {
     color: $color-main;
     background-color: $color-default-btn;
+
+    text-decoration: none;
     
     border: $button-main-border;
     border-radius: 1.25rem;
