@@ -91,10 +91,10 @@ const htmlInclude = () => {
 
 const imgToApp = () => {
   return src([
-    './src/assets/img/**.jpg',
-    './src/assets/img/**.png',
-    './src/assets/img/**.jpeg',
-    './src/assets/img/**.webp',
+    './src/assets/img/**/**.jpg',
+    './src/assets/img/**/**.png',
+    './src/assets/img/**/**.jpeg',
+    './src/assets/img/**/**.webp',
   ]).pipe(dest('./app/img'))
 }
 
@@ -106,6 +106,7 @@ const scripts = () => {
         entry: {
           'main': './src/js/main.js',
           'calendar': './src/js/calendar.js',
+          'event': './src/js/event.js',
         },
         output: {
           filename: '[name].js',
@@ -148,10 +149,10 @@ const watchFiles = () => {
   watch(['./src/components/**/*.html', './src/*.html'], htmlInclude)
   watch(
     [
-      './src/assets/img/**.jpg',
-      './src/assets/img/**.jpeg',
-      './src/assets/img/**.png',
-      './src/assets/img/**.webp',
+      './src/assets/img/**/**.jpg',
+      './src/assets/img/**/**.jpeg',
+      './src/assets/img/**/**.png',
+      './src/assets/img/**/**.webp',
     ],
     imgToApp
   )

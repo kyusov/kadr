@@ -203,6 +203,8 @@
     }
 
     &__button {
+      text-decoration: none;
+
       border: 0.125rem solid $color-main;
       box-shadow: $button-shadow;
       background-color: $color-main;

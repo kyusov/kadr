@@ -33,7 +33,7 @@ const createSwiper = () => {
     speed: 500,
   })
 
-  console.log(Math.round(swiperContainer.children.length / 2) )
+  console.log(Math.round(swiperContainer.children.length / 2))
 
   swiperContainer.style.opacity = 1
 }
@@ -124,7 +124,7 @@ const drawDays = (year, events) => {
 
 fetch('https://kadr-server.herokuapp.com/data')
   .then((result) => result.json())
-  .then((json) => drawDays(2020, json.events))
+  .then((json) => drawDays(2020, json))
 
 const createSlides = (events, date, month) => {
   const dates = Object.values(events).filter(
@@ -140,7 +140,7 @@ const createSlides = (events, date, month) => {
     const slideWrapper = document.createElement('div')
     const content = document.createElement('p')
     const buttonWrapper = document.createElement('div')
-    const button = document.createElement('button')
+    const button = document.createElement('a')
     const subTitle = document.createElement('h3')
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
     svg.setAttribute('viewBox', '0 0 52 52')
@@ -173,6 +173,7 @@ const createSlides = (events, date, month) => {
 
     button.classList.add('calendar-slide__button')
     button.textContent = 'Записаться'
+    button.setAttribute('href', `event.html?${dates[key]['id']}`)
     buttonWrapper.classList.add('calendar-slide__button-wrapper')
     buttonWrapper.append(button)
     buttonWrapper.append(svg)
@@ -186,8 +187,7 @@ const createSlides = (events, date, month) => {
     if (+key === 0) {
       const mainTitle = document.createElement('div')
       mainTitle.classList.add('calendar-slide__title')
-      mainTitle.textContent =
-        date + ' ' + months.filter((e, index) => index === month)
+      mainTitle.textContent = date + ' ' + months.filter((e, index) => index === month)
       slideWrapper.append(mainTitle)
     }
 
@@ -199,11 +199,9 @@ const createSlides = (events, date, month) => {
 
     slide.append(slideWrapper)
 
-    console.log(slide)
     arrayForSliders.push(slide)
   }
 
-  // проверить на нчетных значениях
   for (let i = 0; i < arrayForSliders.length; i += 2) {
     if (arrayForSliders.length === 1) {
       const div = document.createElement('div')
@@ -213,12 +211,20 @@ const createSlides = (events, date, month) => {
       break
     }
 
-    const div = document.createElement('div')
-    div.append(arrayForSliders[i])
-    div.append(arrayForSliders[i + 1])
-    div.classList.add('swiper-slide', 'calendar-slide')
-    swiperContainer.append(div)
-    
+    if (arrayForSliders[i + 1]) {
+      const div = document.createElement('div')
+      div.append(arrayForSliders[i])
+      div.append(arrayForSliders[i + 1])
+      div.classList.add('swiper-slide', 'calendar-slide')
+      swiperContainer.append(div)
+    } else {
+      const div = document.createElement('div')
+      const blankDiv = document.createElement('div')
+      div.append(arrayForSliders[i])
+      div.append(blankDiv)
+      div.classList.add('swiper-slide', 'calendar-slide')
+      swiperContainer.append(div)
+    }
   }
 
   createSwiper()
