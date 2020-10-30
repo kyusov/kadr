@@ -58,6 +58,7 @@
   &__container {
     padding-left: 1.25rem;
     margin-top: 1.875rem;
+    position: relative;
   }
 
   &__controls {
@@ -223,6 +224,23 @@
       &:hover {
         cursor: pointer;
       }
+    }
+  }
+
+  .loading {
+    display: block;
+    opacity: 1;
+    transition: opacity .3s ease;
+    &.over {
+      transition: opacity .3s ease;
+      opacity: 0;
+      display: none;;
+    }
+
+    &-container {
+      position: absolute;
+      top: 7.75rem;
+      left: 9rem;
     }
   }
 }

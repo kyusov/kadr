@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 7rem;
+    padding: 7rem 1.5rem 0 0;
   }
 
   &__bottom-img,
@@ -29,11 +29,12 @@
   }
 
   &__bottom-img {
-    left: 8.625rem;
+    right: 1.5rem;
   }
 
   &__top-img {
     top: 25.75rem;
+    left: 1.25rem;
   }
 
   &__title {
@@ -84,4 +85,295 @@
       transform: translate(0, -50%);
     }
   }
+}
+
+.info-price {
+  width: calc(100% - 14.75rem);
+  margin: 6.125rem auto 0 auto;
+  display: flex;
+
+  &__left,
+  &__right {
+    width: 50%;
+  }
+
+  &__left {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  &__bottom-img,
+  &__top-img {
+    position: absolute;
+    width: 28.125rem;
+    border-radius: 1.25rem;
+    background-color: gray;
+    box-shadow: 0.375rem 0.375rem 1.25rem rgba(0, 0, 0, 0.25);
+  }
+
+  &__top-img {
+    top: 18.85rem;
+    left: 8.75rem;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 1.063rem;
+  }
+
+  &__description {
+    &-wrapper {
+      max-width: 28.625rem;
+    }
+
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    color: $color-text;
+
+    margin-top: 2.25rem;
+
+    &:first-child {
+      margin-top: 4.375rem;
+    }
+  }
+
+  &__price {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    color: $color-text;
+    text-transform: uppercase;
+    word-wrap: break-word;
+
+    max-width: 16.25rem;
+    align-self: flex-start;
+
+    margin-top: 4.063rem;
+
+    span {
+      text-transform: none;
+      color: $color-main;
+    }
+  }
+}
+
+.offer-card-price {
+  width: calc(100% - 14.75rem);
+  margin: 8.375rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+
+  &__card {
+    max-width: 35.125rem;
+    max-height: 26.25rem;
+    padding: 2.188rem 3.688rem 4.563rem 4.313rem;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 1.25rem;
+    background-color: $color-main;
+    box-shadow: 0.375rem 0.375rem 1.25rem rgba(0, 0, 0, 0.25);
+
+    .card {
+      &__name,
+      &__email {
+        font-size: 1.5rem;
+        line-height: 2.438rem;
+        color: $color-text-white;
+        font-weight: 700;
+      }
+
+      &__email {
+        margin-top: 1.25rem;
+      }
+
+      &__distribution {
+        margin-top: 1.625rem;
+      }
+
+      &__consent {
+        margin-top: 0.75rem;
+
+        a {
+          margin-left: 4px;
+          color: $color-text-white;
+        }
+      }
+
+      &__distribution,
+      &__consent {
+        font-size: 0.75rem;
+        line-height: 1.188rem;
+        color: $color-text-white;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        input[type='checkbox'] {
+          position: absolute;
+          z-index: -10;
+          opacity: 0;
+        }
+
+        span {
+          display: inline-flex;
+          user-select: none;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 0.75rem;
+            height: 0.75rem;
+            border: 0.063rem solid $color-text-white;
+            margin-right: 0.5em;
+            background-color: $color-text-white;
+          }
+        }
+
+        input:not(:disabled):active + span::before {
+          background-color: #ffb3b3;
+          border-color: #ffb3b3;
+        }
+
+        input:checked + span::before {
+          border-color: $color-text-white;
+          background-color: $color-main;
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fefefe' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        }
+      }
+
+      &__submit {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.875rem;
+
+        span {
+          font-size: 2.25rem;
+          line-height: 3.813rem;
+          font-weight: 900;
+          text-transform: lowercase;
+          color: $color-text-white;
+        }
+
+        button {
+          font-size: 1rem;
+          line-height: 1.625rem;
+          color: $color-text-white;
+          background-color: $color-main;
+          padding: 0.813rem 5rem;
+
+          outline: none;
+          border: 0.125rem solid white;
+          border-radius: 1.25rem;
+          box-shadow: 0.188rem 0.188rem 0.938rem rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    input:not([type='checkbox']) {
+      width: 100%;
+
+      font-size: 1.125rem;
+      line-height: 1.813rem;
+
+      background-color: transparent;
+      color: $color-text-white;
+
+      border: none;
+      border-bottom: 0.125rem solid $color-text-white;
+
+      outline: none;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+.page-controls {
+  width: calc(100% - 17.875rem);
+  margin: 8.125rem auto 7.125rem auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__prev, &__next {
+    width: 28rem;
+    height: 26rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border-radius: 1.25rem;
+    box-shadow: 0.375rem 0.375rem 1.25rem rgba(0, 0, 0, 0.25);
+    background: url('../img/slider-bg.webp') no-repeat / cover;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.438rem;
+    margin-top: 1.438rem;
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    margin-top: 0.75rem;
+  }
+
+  &__button-prev, &__button-next {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 2rem;
+
+    -webkit-text-stroke: 0.125rem $color-main;
+    color: transparent;
+    text-transform: uppercase;
+
+    margin: 3.125rem 0 1.875rem 0;
+
+    transition: color .4s ease;
+
+    &:hover {
+      transition: color .4s ease;
+      color: $color-main;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+  }
+
+  &__date {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.438rem;
+    color: $color-text-white;
+    top: 0.938rem;
+    left: 1.5rem;
+  }
+
 }

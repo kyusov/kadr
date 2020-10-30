@@ -124,7 +124,10 @@ const drawDays = (year, events) => {
 
 fetch('https://kadr-server.herokuapp.com/data')
   .then((result) => result.json())
-  .then((json) => drawDays(2020, json))
+  .then((json) => {
+    document.querySelector('.loading').classList.add('over')
+    drawDays(2020, json)
+  })
 
 const createSlides = (events, date, month) => {
   const dates = Object.values(events).filter(
@@ -187,7 +190,8 @@ const createSlides = (events, date, month) => {
     if (+key === 0) {
       const mainTitle = document.createElement('div')
       mainTitle.classList.add('calendar-slide__title')
-      mainTitle.textContent = date + ' ' + months.filter((e, index) => index === month)
+      mainTitle.textContent =
+        date + ' ' + months.filter((e, index) => index === month)
       slideWrapper.append(mainTitle)
     }
 

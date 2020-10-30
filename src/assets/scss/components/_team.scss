@@ -71,6 +71,8 @@
     }
 
     &__button {
+        display: inline-block;
+        text-decoration: none;
         color: $color-text-white;
         background-color: $color-main;
         border: $button-border;
