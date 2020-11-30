@@ -91,20 +91,25 @@ const htmlInclude = () => {
 
 const imgToApp = () => {
   return src([
-    './src/assets/img/**.jpg',
-    './src/assets/img/**.png',
-    './src/assets/img/**.jpeg',
-    './src/assets/img/**.webp',
+    './src/assets/img/**/**.jpg',
+    './src/assets/img/**/**.png',
+    './src/assets/img/**/**.jpeg',
+    './src/assets/img/**/**.webp',
   ]).pipe(dest('./app/img'))
 }
 
 const scripts = () => {
-  return src('./src/js/main.js')
+  return src('./src/js/**/*.js')
     .pipe(
       webpackStream({
         mode: 'development',
+        entry: {
+          'main': './src/js/main.js',
+          'calendar': './src/js/calendar.js',
+          'event': './src/js/event.js',
+        },
         output: {
-          filename: 'main.js',
+          filename: '[name].js',
         },
         module: {
           rules: [
@@ -144,10 +149,10 @@ const watchFiles = () => {
   watch(['./src/components/**/*.html', './src/*.html'], htmlInclude)
   watch(
     [
-      './src/assets/img/**.jpg',
-      './src/assets/img/**.jpeg',
-      './src/assets/img/**.png',
-      './src/assets/img/**.webp',
+      './src/assets/img/**/**.jpg',
+      './src/assets/img/**/**.jpeg',
+      './src/assets/img/**/**.png',
+      './src/assets/img/**/**.webp',
     ],
     imgToApp
   )

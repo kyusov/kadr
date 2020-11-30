@@ -153,4 +153,51 @@
       font-weight: 400;
     }
   }
+
+  @media screen and (max-width: 375px) {
+    &__wrapper {
+      width: calc(100% - 7.5rem);
+    }
+
+    &__title {
+      font-size: 1.55rem;
+      margin-left: 0;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left, &__right {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__content-column {
+      width: 48%;
+
+      svg {
+        width: 8rem;
+        height: 8rem;
+        margin: 0;
+      }
+    }
+
+    &-swiper {
+      &__title {
+        font-size: 1.55rem;
+        line-height: 1.4;
+      }
+
+      &__subtitle {
+        font-size: 1.35rem;
+      }
+
+      &__info {
+        text-align: justify;
+        font-size: 1.1rem;
+        line-height: 1.35;
+      }
+    }
+  }
 }

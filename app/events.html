@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мероприятия</title>
+    <link rel="stylesheet" href="css/events.min.css">
+    <script src="js/calendar.js" defer></script>
+</head>
+<body>
+    <header class="header">
+    <div class="header__logo">
+        <a href="/">
+            <svg>
+                <use xlink:href="img/sprite.svg#kadr-logo"></use>
+            </svg>
+        </a>
+    </div>
+    <nav class="header__navigation">
+        <div class="header__for header-for">
+            <a href="/aspirant.html" class="header-for__aspirant">Для соискателя</a>
+            <a href="/employer.html" class="header-for__employer">Для работодателя</a>
+        </div>
+        <div class="header__contacts header-contacts">
+            <a href="mailto:info@kadr-center.ru" class="header-contacts__mail">
+                <svg>
+                    <use xlink:href="img/sprite.svg#mail"></use>
+                </svg>
+                info@kadr-center.ru
+            </a>
+            <a href="tel:+7(3952)48-99-00" class="header-contacts__phone">
+                <svg>
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                +7 (3952) 48-99-00
+            </a>
+        </div>
+    </nav>
+</header>
+    <div class="calendar">
+    <div class="calendar__wrapper">
+        <div class="calendar__left">
+            <h2 class="calendar__title">Мероприятия</h2>
+            <div class="calendar__filter filter">
+                <p class="filter__title">Фильтр:</p>
+                <ul class="filter__controls">
+                    <li class="filter__item active">Все</li>
+                    <li class="filter__item">Бизнес</li>
+                    <li class="filter__item">Продажи</li>
+                    <li class="filter__item">Мотивация</li>
+                </ul>
+            </div>
+            <div class="calendar__container">
+                <svg class="loading loading-container" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    style="margin: auto; background:transparent;" width="200px" height="200px"
+                    viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <rect x="20" y="30.5" width="10" height="39" fill="#d40f14">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="20.75;30.5;30.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                            begin="-0.2s"></animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="58.5;39;39" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s">
+                        </animate>
+                    </rect>
+                    <rect x="45" y="30.5" width="10" height="39" fill="#d40f14">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="23.1875;30.5;30.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                            begin="-0.1s"></animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="53.625;39;39" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s">
+                        </animate>
+                    </rect>
+                    <rect x="70" y="30.5" width="10" height="39" fill="#d40f14">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="23.1875;30.5;30.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1">
+                        </animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="53.625;39;39" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+                    </rect>
+                </svg>
+                <div class="calendar__controls">
+                    <button class="calendar__prev">Сен</button>
+                    <button class="calendar__current">Октябрь</button>
+                    <button class="calendar__next">Ноя</button>
+                </div>
+                <table class="calendar__table">
+                    <thead class="calendar__thead">
+                        <tr>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
+                            <th>Вс</th>
+                        </tr>
+                    </thead>
+                    <tbody class="calendar__tbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="calendar__right">
+            <div class="swiper-container calendar-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="sidebar">
+    <div class="sidebar__blank"></div>
+    <div class="sidebar__request">
+        <p>Записаться<br>на<br>тренинги</p>
+    </div>
+    <div class="sidebar__arrow-top">
+        <svg>
+            <use class="arrow-use" xlink:href="img/sprite.svg#arrowTop" fill="white"></use>
+        </svg>
+    </div>
+</div>
+
+<div class="burger-wrapper">
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<div class="dropdown">
+    <div class="dropdown__header">
+        <svg>
+            <use xlink:href="img/sprite.svg#kadr-logo-white"></use>
+        </svg>
+    </div>
+    <ul class="dropdown__menu">
+        <li class="dropdown__item">Для работодателя</li>
+        <li class="dropdown__item">ДЛЯ СОИСКАТЕЛЯ</li>
+        <li class="dropdown__item">МЕРОПРИЯТИЯ</li>
+        <li class="dropdown__item">О НАС</li>
+        <li class="dropdown__item">КОМАНДА</li>
+        <li class="dropdown__item">КАРЬЕРА У НАС</li>
+        <li class="dropdown__item">НАм доверяют</li>
+        <li class="dropdown__item">Контакты</li>
+    </ul>
+    <div class="dropdown__right-side">
+        <div class="dropdown__social">
+            <a href="#">
+                <svg>
+                    <use xlink:href="img/sprite.svg#social-inst-white"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg>
+                    <use xlink:href="img/sprite.svg#social-ut-white"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="dropdown__contacts">
+            <a href="mailto:info@kadr-center.ru" class="dropdown__mail">
+                <svg>
+                    <use xlink:href="img/sprite.svg#mail-white"></use>
+                </svg>
+                info@kadr-center.ru
+            </a>
+            <a href="tel:+7(3952)48-99-00" class="dropdown__phone">
+                <svg>
+                    <use xlink:href="img/sprite.svg#phone-white"></use>
+                </svg>
+                +7 (3952) 48-99-00
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="center-line"></div>
+    <div class="left-side-bar"></div>
+</body>
+</html>

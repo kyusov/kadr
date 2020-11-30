@@ -77,7 +77,7 @@ $border-burger: 0.125rem solid $color-main;
   top: 0;
   right: 0;
   // background-color: white;
-  z-index: 20;
+  z-index: 52;
 
   .burger {
     position: fixed;
@@ -131,7 +131,7 @@ $border-burger: 0.125rem solid $color-main;
   transform: translateY(-250%);
   transition: transform 0.4s ease-in-out;
 
-  z-index: 15;
+  z-index: 51;
 
   &.down {
     transform: translateY(0);
@@ -251,7 +251,7 @@ $border-burger: 0.125rem solid $color-main;
 
 .center-line {
   position: fixed;
-  z-index: -2;
+  z-index: -4;
   height: 100vh;
   top: 0;
   left: 50%;
@@ -286,5 +286,41 @@ $border-burger: 0.125rem solid $color-main;
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(215, 15, 22, 0);
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .sidebar {
+    height: 100%;
+    width: 4.133rem;
+
+    &__blank {
+      width: 4.133rem;
+    }
+
+    &__request {
+      width: 3.138rem;
+      height: 3.138rem;
+
+      p {
+        font-size: .45rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  .burger-wrapper {
+    width: 4.133rem;
+
+    .burger {
+      span {
+        height: 2px;
+      }
+    }
+  }
+
+  .center-line {
+    height: 100%;
   }
 }

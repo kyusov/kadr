@@ -1,5 +1,6 @@
 .slider {
-  z-index: 1;
+  // z-index: -1;
+  // position: relative;
   background-color: $color-bg-white;
   &__wrapper {
     // max-width: 72.25rem;
@@ -170,6 +171,8 @@
   &__button {
     color: $color-main;
     background-color: $color-default-btn;
+
+    text-decoration: none;
     
     border: $button-main-border;
     border-radius: 1.25rem;
@@ -189,5 +192,45 @@
         background-color: $color-main-btn;
     }
 
+  }
+
+  @media screen and (max-width: 375px) {
+    &__wrapper {
+      width: calc(100% - 8rem);
+      padding: 3.5rem 0;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 0;
+    }
+
+    .slide {
+      width: 224px;
+      border-radius: 0.65rem;
+    }
+
+    .substrate {
+      &__title {
+        line-height: 1.9rem;
+      }
+
+      &__footer {
+        justify-content: space-between;
+      }
+
+      &__arrow-link {
+        margin: 0;
+      }
+
+      &__button {
+        width: 70%;
+      }
+    }
   }
 }

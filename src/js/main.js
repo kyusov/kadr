@@ -1,4 +1,6 @@
 import { Swiper, Pagination, Navigation } from 'swiper'
+import './burger'
+
 const DG = require('2gis-maps')
 
 Swiper.use([Pagination, Navigation])
@@ -7,7 +9,8 @@ new Swiper('.swiper-events', {
   loop: true,
   updateOnWindowResize: true,
   speed: 400,
-  slidesPerView: 3,
+  slidesPerView : 3,
+  slidesPerGroup: 3,
   centeredSlides: true,
   spaceBetween: 20,
   pagination: {
@@ -15,6 +18,13 @@ new Swiper('.swiper-events', {
     type: 'bullets',
     clickable: true,
   },
+  breakpoints: {
+    319: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+    }
+  }
 })
 
 new Swiper('.partners-swiper', {
@@ -29,6 +39,8 @@ new Swiper('.partners-swiper', {
   },
 })
 
+/// map 2gis
+
 DG.then(function () {
   const map = DG.map('map-contacts', {
     center: [52.283436, 104.296835],
@@ -39,6 +51,8 @@ DG.then(function () {
 
   DG.marker([52.283436, 104.296835]).addTo(map)
 })
+
+/// end map
 
 /// hover main title
 
@@ -69,70 +83,27 @@ for (let i = 0; i < spans.length; i++) {
 
 /// hover main title end
 
-/// burger
-
-const burgerHandler = (dropdown, event) => {
-  const parent = event.target.classList.contains('burger')
-    ? event.target
-    : event.target.parentElement
-
-  const spans = [...parent.children]
-
-  if (!parent.classList.contains('active')) {
-    parent.classList.toggle('active')
-
-    dropdown.style.transform = 'translateY(0)'
- 
-    spans.map((e) => {
-      e.style.margin = 0
-      e.style.backgroundColor = 'white'
-    })
-
-    parent.style.borderColor = 'white'
-
-    spans[1].style.opacity = 0
-
-    spans[0].style.transform = 'rotate(45deg)'
-    spans[2].style.transform = 'rotate(-45deg)'
-  } else {
-    parent.classList.toggle('active')
-
-    dropdown.style.transform = 'translateY(-150%)'
-
-    spans.map((e) => (e.style.backgroundColor = '#D40F14'))
-
-    parent.style.borderColor = '#D40F14'
-
-    spans[0].style.transform = 'translate(0, 0) rotate(0deg)'
-    spans[1].style.opacity = 1
-    spans[2].style.transform = 'translate(0, 0) rotate(0deg)'
-
-    spans[0].style.marginBottom = '0.875rem'
-    spans[2].style.marginTop = '0.875rem'
-  }
-}
-
-const burger = document.querySelector('.burger')
-const dropdown = document.querySelector('.dropdown')
-
-burger.addEventListener('click', burgerHandler.bind(this, dropdown))
-
-/// burger end
-
-
 /// gifs
 
-const gifs = [...document.querySelectorAll('.aspirant-info__titles > img'), ...document.querySelectorAll('.employer-info__titles > img')]
-const titles = [...document.querySelectorAll('.aspirant-info__titles > h3'), ...document.querySelectorAll('.employer-info__titles > h3')]
+const gifs = [
+  ...document.querySelectorAll('.aspirant-info__titles > img'),
+  ...document.querySelectorAll('.employer-info__titles > img'),
+]
+const titles = [
+  ...document.querySelectorAll('.aspirant-info__titles > h3'),
+  ...document.querySelectorAll('.employer-info__titles > h3'),
+]
 
 for (let i = 0; i < titles.length; i++) {
   titles[i].addEventListener('mouseenter', () => {
     titles[i].classList.toggle('active')
     gifs[i].classList.toggle('active')
   })
-  
+
   titles[i].addEventListener('mouseleave', () => {
     titles[i].classList.toggle('active')
     gifs[i].classList.toggle('active')
   })
 }
+
+/// gifs end

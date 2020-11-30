@@ -1,0 +1,70 @@
+<div class="calendar">
+    <div class="calendar__wrapper">
+        <div class="calendar__left">
+            <h2 class="calendar__title">Мероприятия</h2>
+            <div class="calendar__filter filter">
+                <p class="filter__title">Фильтр:</p>
+                <ul class="filter__controls">
+                    <li class="filter__item active">Все</li>
+                    <li class="filter__item">Бизнес</li>
+                    <li class="filter__item">Продажи</li>
+                    <li class="filter__item">Мотивация</li>
+                </ul>
+            </div>
+            <div class="calendar__container">
+                <svg class="loading loading-container" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    style="margin: auto; background:transparent;" width="200px" height="200px"
+                    viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <rect x="20" y="30.5" width="10" height="39" fill="#d40f14">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="20.75;30.5;30.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                            begin="-0.2s"></animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="58.5;39;39" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s">
+                        </animate>
+                    </rect>
+                    <rect x="45" y="30.5" width="10" height="39" fill="#d40f14">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="23.1875;30.5;30.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                            begin="-0.1s"></animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="53.625;39;39" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s">
+                        </animate>
+                    </rect>
+                    <rect x="70" y="30.5" width="10" height="39" fill="#d40f14">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="23.1875;30.5;30.5" keySplines="0 0.5 0.5 1;0 0.5 0.5 1">
+                        </animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline"
+                            keyTimes="0;0.5;1" values="53.625;39;39" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+                    </rect>
+                </svg>
+                <div class="calendar__controls">
+                    <button class="calendar__prev">Сен</button>
+                    <button class="calendar__current">Октябрь</button>
+                    <button class="calendar__next">Ноя</button>
+                </div>
+                <table class="calendar__table">
+                    <thead class="calendar__thead">
+                        <tr>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
+                            <th>Вс</th>
+                        </tr>
+                    </thead>
+                    <tbody class="calendar__tbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="calendar__right">
+            <div class="swiper-container calendar-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+    </div>
+</div>
