@@ -9,7 +9,8 @@ new Swiper('.swiper-events', {
   loop: true,
   updateOnWindowResize: true,
   speed: 400,
-  slidesPerView: 3,
+  slidesPerView : 3,
+  slidesPerGroup: 3,
   centeredSlides: true,
   spaceBetween: 20,
   pagination: {
@@ -17,6 +18,13 @@ new Swiper('.swiper-events', {
     type: 'bullets',
     clickable: true,
   },
+  breakpoints: {
+    319: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+    }
+  }
 })
 
 new Swiper('.partners-swiper', {
@@ -31,6 +39,8 @@ new Swiper('.partners-swiper', {
   },
 })
 
+/// map 2gis
+
 DG.then(function () {
   const map = DG.map('map-contacts', {
     center: [52.283436, 104.296835],
@@ -41,6 +51,8 @@ DG.then(function () {
 
   DG.marker([52.283436, 104.296835]).addTo(map)
 })
+
+/// end map
 
 /// hover main title
 

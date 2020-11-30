@@ -63,4 +63,25 @@
   }
 
   &__popup-employer {background-image: url('../img/popup-employer.jpg');}
+
+  @media screen and (max-width: 375px) {
+
+    .br--decoy {
+      display: none;
+    }
+
+    &__wrapper {
+      width: calc(100% - 8rem);
+      margin: 2.5rem auto 0 auto;
+    }
+
+    &__title {
+      font-size: 1.92rem;
+      line-height: 1.6;
+
+      span {
+        -webkit-text-stroke: 1px $color-main;
+      }
+    }
+  }
 }

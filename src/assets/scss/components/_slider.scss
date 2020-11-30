@@ -193,4 +193,44 @@
     }
 
   }
+
+  @media screen and (max-width: 375px) {
+    &__wrapper {
+      width: calc(100% - 8rem);
+      padding: 3.5rem 0;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 0;
+    }
+
+    .slide {
+      width: 224px;
+      border-radius: 0.65rem;
+    }
+
+    .substrate {
+      &__title {
+        line-height: 1.9rem;
+      }
+
+      &__footer {
+        justify-content: space-between;
+      }
+
+      &__arrow-link {
+        margin: 0;
+      }
+
+      &__button {
+        width: 70%;
+      }
+    }
+  }
 }

@@ -288,3 +288,39 @@ $border-burger: 0.125rem solid $color-main;
     box-shadow: 0 0 0 0 rgba(215, 15, 22, 0);
   }
 }
+
+
+@media screen and (max-width: 375px) {
+  .sidebar {
+    height: 100%;
+    width: 4.133rem;
+
+    &__blank {
+      width: 4.133rem;
+    }
+
+    &__request {
+      width: 3.138rem;
+      height: 3.138rem;
+
+      p {
+        font-size: .45rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  .burger-wrapper {
+    width: 4.133rem;
+
+    .burger {
+      span {
+        height: 2px;
+      }
+    }
+  }
+
+  .center-line {
+    height: 100%;
+  }
+}
