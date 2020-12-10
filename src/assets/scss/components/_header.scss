@@ -66,7 +66,11 @@
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
+    
+  }
+
+  @media screen and (max-width: 425px) {
     width: 100%;
     margin-right: 0;
 
@@ -74,17 +78,9 @@
       display: none;
     }
 
-    &__for {
-      width: 100%;
-      flex-direction: column;
-      a:last-child {
-        margin-left: 0;
-        margin-top: 0.833rem;
-      }
-    }
-
     &__contacts {
       display: none;
     }
+
   }
 }

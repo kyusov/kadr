@@ -13,6 +13,7 @@ new Swiper('.swiper-events', {
   slidesPerGroup: 3,
   centeredSlides: true,
   spaceBetween: 20,
+  grabCursor: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -20,9 +21,16 @@ new Swiper('.swiper-events', {
   },
   breakpoints: {
     319: {
-      slidesPerView: 1,
+      slidesPerView: 'auto',
       slidesPerGroup: 1,
-      spaceBetween: 20,
+      loopedSlides: 1,
+      spaceBetween: 10,
+    },
+    424: {
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+      loopedSlides: 1,
+      spaceBetween: 50
     }
   }
 })
@@ -37,6 +45,14 @@ new Swiper('.partners-swiper', {
   navigation: {
     nextEl: '.swiper-button-next',
   },
+  breakpoints: {
+    319: {
+      spaceBetween: 102
+    },
+    420: {
+      spaceBetween: 70
+    }
+  }
 })
 
 /// map 2gis

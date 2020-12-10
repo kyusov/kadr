@@ -8,8 +8,7 @@
     background-color: #fff;
     border-right: .063rem solid $color-main;
 
-    @media screen and (max-width: 375px) {
-        width: 3.333rem;
-        height: 100%;
+    @media screen and (max-width: 425px) {
+        display: none;
     }
 }
