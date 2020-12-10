@@ -64,15 +64,27 @@
 
   &__popup-employer {background-image: url('../img/popup-employer.jpg');}
 
-  @media screen and (max-width: 375px) {
-
+  @media screen and (max-width: 425px) {
     .br--decoy {
       display: none;
     }
 
     &__wrapper {
-      width: calc(100% - 8rem);
-      margin: 2.5rem auto 0 auto;
+      width: calc(100% - 3.5rem);
+      margin: 2.5rem auto 0 1.25rem;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      line-height: 1.8;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+
+    &__wrapper {
+      width: calc(100% - 4.2rem);
+      margin: 2.5rem auto 0 1.25rem;
     }
 
     &__title {

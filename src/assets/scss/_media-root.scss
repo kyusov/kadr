@@ -39,6 +39,20 @@
       transition: font-size .3s ease;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    :root {
+      font-size: 14px;
+      transition: font-size .3s ease;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    :root {
+      font-size: 12px;
+      transition: font-size .3s ease;
+    }
+  }
   
   @media screen and (max-width: 375px) {
     :root {

@@ -124,7 +124,7 @@ $border-burger: 0.125rem solid $color-main;
 .dropdown {
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: $color-main;
   top: 0;
   left: 0;
@@ -289,10 +289,41 @@ $border-burger: 0.125rem solid $color-main;
   }
 }
 
+@media screen and (max-width: 425px) {
+  .sidebar {
+    height: 100%;
+    width: 4.2rem;
+
+    &__blank {
+      width: 4.2rem;
+    }
+
+    &__request {
+      width: 3.15rem;
+      height: 3.15rem;
+
+      p {
+        font-size: .5rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  .center-line {
+    height: 100%;
+  }
+
+  .burger-wrapper {
+    width: 4.2rem;
+
+    .burger span {
+      height: 2px;
+    }
+  }
+}
 
 @media screen and (max-width: 375px) {
   .sidebar {
-    height: 100%;
     width: 4.133rem;
 
     &__blank {
@@ -312,15 +343,16 @@ $border-burger: 0.125rem solid $color-main;
 
   .burger-wrapper {
     width: 4.133rem;
-
-    .burger {
-      span {
-        height: 2px;
-      }
-    }
   }
 
-  .center-line {
-    height: 100%;
+  .dropdown {
+    &__item {
+      font-size: 2.5rem;
+      -webkit-text-stroke-width: 1px;
+    }
+
+    &__menu {
+      height: 60%;
+    }
   }
 }

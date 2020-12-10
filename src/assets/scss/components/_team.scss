@@ -94,19 +94,21 @@
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     &__wrapper {
-      width: calc(100% - 8rem);
-      padding: 1.875rem 0 2rem 0;
+      width: calc(100% - 3.7rem);
+      margin-left: 1.25rem;
+      padding: 2rem 0;
     }
 
     &__title {
-      font-size: 1.55rem;
+      font-size: 2rem;
       margin: 0;
-      padding-top: 0;
+      padding: 0;
     }
 
     &__info {
+      margin-top: 1rem;
       flex-direction: column-reverse;
     }
 
@@ -121,6 +123,49 @@
       }
 
       &__image {
+        width: 85%;
+
+        img {
+          width: 98%;
+        }
+      }
+
+      &__image-top {
+        right: 5rem;
+      }
+    }
+
+    &__text {
+      margin: 0;
+      max-width: none;
+      width: 98%;
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+    }
+
+    &__button {
+      display: block;
+      margin: 3rem auto;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    &__wrapper {
+      width: calc(100% - 4.2rem);
+      padding: 1.875rem 0 2rem 0;
+    }
+
+    &__title {
+      font-size: 1.55rem;
+      margin: 0;
+      padding-top: 0;
+    }
+
+    .right-content {
+      &__image {
         width: 80%;
 
         img {
@@ -131,22 +176,19 @@
 
       &__image-top {
         top: -6rem;
-        right: 3.65rem;
+        right: 5.25rem;
+      }
+
+      &__image-bottom {
+        right: 1.35rem;
       }
     }
 
     &__text {
-      margin: 0;
-
       p {
-        font-size: 1rem;
+        font-size: 1.25rem;
         line-height: 1.525rem;
       }
-    }
-
-    &__button {
-        margin-top: 1.875rem;
-        width: 100%;
     }
   }
 }

@@ -1,5 +1,4 @@
 .contacts {
-
   background-color: $color-bg-white;
   &__wrapper {
     width: calc(100% - 9rem);
@@ -16,7 +15,7 @@
 
     padding-top: 2.063rem;
     // margin-left: 1.125rem;
-    margin:  0 auto;
+    margin: 0 auto;
 
     width: calc(100% - 9rem);
   }
@@ -236,8 +235,7 @@
 
     a {
       display: block;
-      
-      
+
       &:not(:last-child) {
         margin-right: 0.875rem;
       }
@@ -251,36 +249,40 @@
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     &__wrapper {
-      width: calc(100% - 8rem);
+      width: calc(100% - 3.5rem);
+      margin: 0 auto 0 1.25rem;
       padding-bottom: 3rem;
     }
 
     &__title {
-      font-size: 1.55rem;
+      font-size: 2rem;
       margin: 0;
+    }
+
+    &__left,
+    &__right {
+      width: 95%;
     }
 
     &__content {
       width: 100%;
       margin: 0;
-      margin-top: 3rem;
+      margin-top: 2rem;
       flex-direction: column;
     }
 
-    &__left, &__right {
+    &__address,
+    &__phone,
+    &__email {
       width: 100%;
+      font-size: 2rem;
+      line-height: 1.5;
     }
 
     &__info a {
       margin-top: 1.25rem;
-    }
-
-    &__address, &__phone, &__email {
-      width: 100%;
-      font-size: 1.35rem;
-      line-height: 1.2;
     }
 
     &__map {
@@ -295,15 +297,17 @@
       }
 
       label {
-        font-size: 1.15rem;
+        font-size: 1rem;
       }
 
-      &__distribution span, &__consent span {
-        font-size: .85rem;
-        line-height: .95rem;
+      &__distribution span,
+      &__consent span {
+        font-size: 1rem;
+        line-height: 1rem;
 
         &::before {
-          width: .95rem;
+          width: 0.9rem;
+          height: 0.9rem;
         }
       }
 
@@ -321,8 +325,9 @@
         }
       }
 
-      button {
-        width: 100%;
+      &__submit {
+        display: flex;
+        justify-content: center;
       }
     }
 
@@ -344,10 +349,66 @@
       &__row {
         flex-wrap: wrap;
         justify-content: space-between;
+
         a {
           width: 50%;
-          font-size: 1rem;
+          font-size: 1.5rem;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    &__wrapper {
+      width: calc(100% - 4.2rem);
+    }
+
+    &__title {
+      font-size: 1.55rem;
+    }
+
+    &__left,
+    &__right {
+      width: 95%;
+    }
+
+    &__address,
+    &__phone,
+    &__email {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .form {
+      label {
+        font-size: 1.15rem;
+      }
+
+      &__distribution span,
+      &__consent span {
+        font-size: 0.85rem;
+        line-height: 0.95rem;
+      }
+
+      .consent {
+        &-desktop {
+          display: none;
+        }
+
+        &-mobile {
+          display: contents;
+        }
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    .links {
+      &__row a {
+        width: 50%;
+        font-size: 1rem;
       }
     }
   }
