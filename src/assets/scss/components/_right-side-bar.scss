@@ -101,7 +101,6 @@ $border-burger: 0.125rem solid $color-main;
 
     span {
       position: absolute;
-      content: '';
       max-width: 1.688rem;
       width: 100%;
       height: 0.125rem;
@@ -112,10 +111,10 @@ $border-burger: 0.125rem solid $color-main;
         opacity 0.2s ease, margin 0.5s ease;
 
       &:first-child {
-        margin-bottom: 0.875rem;
+        bottom: 0.875rem;
       }
       &:last-child {
-        margin-top: 0.875rem;
+        top: 0.865rem;
       }
     }
   }
