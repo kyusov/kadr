@@ -31,6 +31,12 @@ new Swiper('.swiper-events', {
       slidesPerGroup: 1,
       loopedSlides: 1,
       spaceBetween: 50
+    },
+    640: {
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+      loopedSlides: 1,
+      spaceBetween: 200
     }
   }
 })
@@ -51,6 +57,9 @@ new Swiper('.partners-swiper', {
     },
     420: {
       spaceBetween: 70
+    },
+    640: {
+      spaceBetween: 30
     }
   }
 })
