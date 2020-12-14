@@ -94,9 +94,108 @@
     }
   }
 
+  @media screen and (max-width: 768px) {
+    &__wrapper {
+      width: calc(100% - 10rem);
+      padding: 2rem 0;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin: 0;
+      margin-left: .5rem;
+      padding: 0;
+    }
+
+    &__info {
+      flex-direction: column-reverse;
+      margin: 2rem .5rem 0 .5rem;
+    }
+
+    &__left, &__right {
+      width: 100%;
+    }
+
+    .right-content {
+      &__images {
+        margin: 0;
+        align-items: flex-end;
+      }
+
+      &__image {
+        width: 87%;
+
+        img {
+          width: 100%;
+          max-width: 38rem;
+        }
+      }
+
+      &__image-top {
+        right: 3rem; //3 rem before
+      }
+
+      &__image-bottom {
+        left: unset; //before 3.5rem
+        //right: -6.25rem;
+        
+      }
+    }
+
+    &__text {
+      margin: 0;
+      padding: 0 .5rem;
+      width: 98%;
+      max-width: unset;
+      
+      p {
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+    }
+
+    &__button {
+      display: block;
+      margin: 3rem auto 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .right-content__image img {
+      max-width: 30rem;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .right-content__image img {
+      max-width: 27rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__wrapper {
+      width: calc(100% - 6.25rem);
+      margin: 0 auto 0 1.25rem;
+    }
+
+    &__title {
+      margin-left: 0;
+    }
+
+    &__text {
+      width: 100%;
+      padding: 0;
+    }
+
+    &__info {
+      margin-left: 0;
+    }
+  }
+
   @media screen and (max-width: 425px) {
     &__wrapper {
-      width: calc(100% - 3.7rem);
+      width: calc(100% - 5.5rem);
       margin-left: 1.25rem;
       padding: 2rem 0;
     }
@@ -115,6 +214,7 @@
     &__right,
     &__left {
       width: 100%;
+      margin: 0;
     }
 
     .right-content {
@@ -147,14 +247,13 @@
     }
 
     &__button {
-      display: block;
       margin: 3rem auto;
     }
   }
 
   @media screen and (max-width: 375px) {
     &__wrapper {
-      width: calc(100% - 4.2rem);
+      width: calc(100% - 5.5rem);
       padding: 1.875rem 0 2rem 0;
     }
 
@@ -176,7 +275,7 @@
 
       &__image-top {
         top: -6rem;
-        right: 5.25rem;
+        right: 4.45rem;
       }
 
       &__image-bottom {
@@ -184,7 +283,13 @@
       }
     }
 
+    &__info {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     &__text {
+      width: 100%;
       p {
         font-size: 1.25rem;
         line-height: 1.525rem;

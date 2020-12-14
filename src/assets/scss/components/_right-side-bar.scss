@@ -289,9 +289,41 @@ $border-burger: 0.125rem solid $color-main;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .sidebar {
     height: 100%;
+    width: 5rem;
+
+    &__blank {
+      width: 5rem;
+    }
+
+    &__request {
+      width: 4rem;
+      height: 4rem;
+
+      p {
+        font-size: .5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  .center-line {
+    height: 100%;
+  }
+
+  .burger-wrapper {
+    width: 5rem;
+
+    .burger span {
+      height: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .sidebar {
     width: 4.2rem;
 
     &__blank {
@@ -307,10 +339,6 @@ $border-burger: 0.125rem solid $color-main;
         height: 2rem;
       }
     }
-  }
-
-  .center-line {
-    height: 100%;
   }
 
   .burger-wrapper {

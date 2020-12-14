@@ -1,14 +1,22 @@
 .left-side-bar {
     position: fixed;
     width: 7.375rem;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     z-index: 0;
     background-color: #fff;
     border-right: .063rem solid $color-main;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 768px) {
+        width: 5rem;
+    }
+
+    @media screen and (max-width: 480px) {
         display: none;
+    }
+
+    @media screen and (max-width: 425px) {
+        
     }
 }

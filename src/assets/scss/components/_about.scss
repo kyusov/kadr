@@ -98,9 +98,111 @@
     width: 40%;
   }
 
+  @media screen and (max-width: 768px) {
+    &__wrapper {
+      width: calc(100% - 10rem);
+      margin-top: 14rem;
+      padding-bottom: 2rem;
+    }
+
+    &__title {
+      margin-left: .5rem;
+      font-size: 2rem;
+    }
+
+    &__info {
+      margin: 2rem .5rem 0 .5rem;
+      flex-direction: column;
+    }
+
+    &__left, &__right {
+      width: 100%;
+    }
+
+    .left-content {
+      &__images {
+        align-items: center;
+      }
+
+      &__image {        
+        width: 100%;
+
+        img {
+          max-width: 38rem;
+        }
+      }
+
+      &__image-top {
+        left: 3.5rem;
+      }
+    }
+
+    .right-content {
+      &__title {
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+
+      &__description {
+        font-size: 1.2rem;
+        line-height: 1.35;
+
+        margin-top: 1.5rem;
+
+        p:not(:first-child) {
+          margin-top: 1.5rem;
+        }
+      }
+
+      &__button {
+        display: block;
+        margin: 3rem auto 0 auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .left-content {
+      &__images {
+        align-items: unset;
+      }
+
+      &__image {
+        max-width: 28rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .left-content {
+      &__image {
+        max-width: 24rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .left-content {
+      &__image {
+        max-width: 20rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__wrapper {
+      width: calc(100% - 6.25rem);
+      margin-left: 1.25rem;
+    }
+
+    &__title, &__info {
+      margin-left: 0;
+    }
+  }
+
   @media screen and (max-width: 425px) {
     &__wrapper {
-      width: calc(100% - 3.7rem);
+      width: calc(100% - 5.5rem);
       margin-top: 6.5rem;
       margin-left: 1.25rem;
       padding-bottom: 2rem;
@@ -121,8 +223,20 @@
     }
 
     .left-content {
+      &__images {
+        align-items: unset;
+      }
+
       &__image {
         width: 75%;
+
+        img {
+          max-width: 28.125rem;
+        }
+      }
+
+      &__image-top {
+        left: 6rem;
       }
     }
 
@@ -136,13 +250,14 @@
         font-size: 1.5rem;
         line-height: 1.58;
 
+        margin-top: 2.75rem;
+
         p:not(:first-child) {
           margin-top: 2.25rem;
         }
       }
 
       &__button {
-        display: block;
         margin: 5rem auto 0 auto;
       }
     }
@@ -151,7 +266,7 @@
 
   @media screen and (max-width: 375px) {
     &__wrapper {
-      width: calc(100% - 4.2rem);
+      width: calc(100% - 5.5rem);
       margin-top: 6.25rem;
     }
 
