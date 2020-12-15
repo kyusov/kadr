@@ -64,6 +64,12 @@
 
   &__popup-employer {background-image: url('../img/popup-employer.jpg');}
 
+  @media screen and (max-width: 1024px) {
+    &__wrapper {
+      width: calc(100% - 15.75rem);
+    }
+  }
+
   @media screen and (max-width: 768px) {
     &__wrapper {
       width: calc(100% - 11rem);

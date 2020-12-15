@@ -37,6 +37,12 @@ new Swiper('.swiper-events', {
       slidesPerGroup: 1,
       loopedSlides: 1,
       spaceBetween: 200
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      loopedSlides: 1,
+      spaceBetween: 50
     }
   }
 })
@@ -132,3 +138,14 @@ for (let i = 0; i < titles.length; i++) {
 }
 
 /// gifs end
+
+/// arrow to top
+
+const arrowHandler = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+document.querySelector('.sidebar__arrow-top').addEventListener('click', arrowHandler)

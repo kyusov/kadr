@@ -154,6 +154,27 @@
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left, &__right {
+      width: 100%;
+    }
+
+    &__left {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 885px) {
+    &__left {
+      width: 80%;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     &__wrapper {
       width: calc(100% - 10rem);
@@ -162,10 +183,6 @@
     &__title {
       margin-left: .5rem;
       font-size: 2rem;
-    }
-
-    &__container {
-      flex-direction: column;
     }
 
     &__left, &__right {

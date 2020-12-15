@@ -12,16 +12,20 @@ const burgerHandler = (dropdown, event) => {
     document.body.style.overflowY = 'hidden'
 
     spans.map((e) => {
-      e.style.margin = 0
       e.style.backgroundColor = 'white'
     })
 
     parent.style.borderColor = 'white'
 
-    spans[1].style.opacity = 0
+    spans[0].style.bottom = '1.255rem'
+    spans[2].style.top = '1.255rem'
+    
+    setTimeout(() => {
+      spans[0].style.transform = 'rotate(45deg)'
+      spans[1].style.opacity = 0
+      spans[2].style.transform = 'rotate(-45deg)'
+    }, 500)
 
-    spans[0].style.transform = 'rotate(45deg)'
-    spans[2].style.transform = 'rotate(-45deg)'
   } else {
     parent.classList.toggle('active')
 
@@ -32,12 +36,14 @@ const burgerHandler = (dropdown, event) => {
 
     parent.style.borderColor = '#D40F14'
 
-    spans[0].style.transform = 'translate(0, 0) rotate(0deg)'
+    spans[0].style.transform = 'rotate(0deg)'
     spans[1].style.opacity = 1
-    spans[2].style.transform = 'translate(0, 0) rotate(0deg)'
+    spans[2].style.transform = 'rotate(0deg)'
 
-    spans[0].style.marginBottom = '0.875rem'
-    spans[2].style.marginTop = '0.875rem'
+    setTimeout(() => {
+      spans[0].style.bottom = '0.875rem'
+      spans[2].style.top = '0.875rem'
+    }, 500)
   }
 }
 
