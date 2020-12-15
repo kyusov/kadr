@@ -66,6 +66,34 @@
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    width: calc(100% - 8.725rem);
+    margin-right: 0;
+
+    &__navigation {
+      margin: 0 1rem 0 1.5rem;
+    }
+
+    &__for,
+    &__contacts {
+      flex-direction: column;
+    }
+
+    &__for a,
+    &__contacts a {
+      font-size: 1rem;
+    }
+
+    &__for a:not(:first-child),
+    &__contacts a:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &__contacts a {
+      height: 50%;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     width: calc(100% - 6.5rem);
     margin-right: 0;
@@ -134,11 +162,11 @@
 
   @media screen and (max-width: 480px) {
     &__navigation {
-      margin: 0 0 0 .5rem;
+      margin: 0 0 0 0.5rem;
     }
 
     &__contacts {
-      margin-left: .5rem;
+      margin-left: 0.5rem;
     }
   }
 

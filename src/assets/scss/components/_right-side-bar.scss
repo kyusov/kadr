@@ -108,142 +108,14 @@ $border-burger: 0.125rem solid $color-main;
       background-color: $color-main;
 
       transition: transform 0.4s ease, background-color 0.4s ease,
-        opacity 0.2s ease, margin 0.5s ease;
+        opacity 0.2s ease, margin 0.5s ease, top 0.3s ease, bottom 0.3s ease;
 
       &:first-child {
         bottom: 0.875rem;
       }
       &:last-child {
-        top: 0.865rem;
+        top: 0.875rem;
       }
-    }
-  }
-}
-
-.dropdown {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: $color-main;
-  top: 0;
-  left: 0;
-  transform: translateY(-250%);
-  transition: transform 0.4s ease-in-out;
-
-  z-index: 51;
-
-  &.down {
-    transform: translateY(0);
-    transition: transform 0.4 ease-in-out;
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-    height: 3.125rem;
-
-    svg {
-      width: 11.5rem;
-      height: inherit;
-    }
-    margin: 2rem 8.563rem 0 1.25rem;
-  }
-
-  &__menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 80%;
-
-
-    margin-top: 2.875rem;
-  }
-
-  &__item {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 3.5rem;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 2px $color-text-white;
-
-    transition: color 0.4s ease;
-
-    &:not(:first-child) {
-      margin-top: 2rem;
-    }
-
-    &:hover {
-      cursor: pointer;
-      transition: color 0.4s ease;
-      color: $color-text-white;
-    }
-  }
-
-  &__right-side {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 7.375rem;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  &__social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 17.875rem;
-
-    :not(:first-child) {
-      margin-top: 0.938rem;
-    }
-
-    a {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-
-    svg {
-      width: inherit;
-      height: inherit;
-      border-radius: 1.25rem;
-      box-shadow: 0.25rem 0.25rem 0.938rem rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  &__contacts {
-    width: 13.375rem;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-bottom: 5.7rem;
-    margin-right: 25.75rem;
-    // right: 10rem;
-    // bottom: 6.6rem;
-
-    a {
-      display: flex;
-      align-items: center;
-
-      font-size: 1.125rem;
-      font-weight: 700;
-      line-height: 1.875rem;
-      
-      text-decoration: none;
-      color: $color-text-white;
-    }
-
-    svg {
-      width: 1.125rem;
-      height: 1.125rem;
-
-      margin-right: 0.625rem;
     }
   }
 }
@@ -302,7 +174,7 @@ $border-burger: 0.125rem solid $color-main;
       height: 4rem;
 
       p {
-        font-size: .5rem;
+        font-size: 0.5rem;
         height: 1.5rem;
       }
     }
@@ -321,7 +193,12 @@ $border-burger: 0.125rem solid $color-main;
   }
 }
 
+
 @media screen and (max-width: 425px) {
+  .center-line {
+    display: none;
+  }
+
   .sidebar {
     width: 4.2rem;
 
@@ -334,7 +211,7 @@ $border-burger: 0.125rem solid $color-main;
       height: 3.15rem;
 
       p {
-        font-size: .5rem;
+        font-size: 0.5rem;
         height: 2rem;
       }
     }
@@ -362,7 +239,7 @@ $border-burger: 0.125rem solid $color-main;
       height: 3.138rem;
 
       p {
-        font-size: .45rem;
+        font-size: 0.45rem;
         height: 1.5rem;
       }
     }
@@ -370,16 +247,5 @@ $border-burger: 0.125rem solid $color-main;
 
   .burger-wrapper {
     width: 4.133rem;
-  }
-
-  .dropdown {
-    &__item {
-      font-size: 2.5rem;
-      -webkit-text-stroke-width: 1px;
-    }
-
-    &__menu {
-      height: 60%;
-    }
   }
 }

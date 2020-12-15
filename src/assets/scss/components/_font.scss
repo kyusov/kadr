@@ -10,6 +10,15 @@
 @font-face {
   font-family: 'Axiforma';
   font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/Axiforma-Medium.woff2') format('woff2'),
+    url('../fonts/Axiforma-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url('../fonts/Axiforma-Bold.woff2') format('woff2'),
