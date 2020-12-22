@@ -66,6 +66,43 @@
     }
   }
 
+  @media screen and (max-width: 1350px) {
+    margin-right: 7.5rem;
+
+    &__navigation {
+      margin: 0 1rem;
+    }
+
+    &__contacts a:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1225px) {
+    &__for {
+      width: 45%;
+    }
+
+    &__contacts {
+      width: 55%;
+    }
+  }
+
+  @media screen and (max-width: 1165px) {
+    &__for, &__contacts {
+      width: 50%;
+      flex-direction: column;
+
+      a:not(:first-child) {
+        margin-left: 0;
+      }
+
+      a {
+        height: 50%;
+      }
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     width: calc(100% - 8.725rem);
     margin-right: 0;

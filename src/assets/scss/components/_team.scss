@@ -1,9 +1,9 @@
 .team {
-  background-color: $color-main;
 
   &__wrapper {
     width: calc(100% - 14.75rem);
     margin: 0 auto;
+    background-color: $color-main;
   }
 
   &__title {
@@ -94,7 +94,13 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1350px) {
+    .right-content__image img {
+      max-width: 24rem;
+    }
+  }
+
+  @media screen and (max-width: 1165px) {
     &__wrapper {
       padding-bottom: 2rem;
     }

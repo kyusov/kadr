@@ -42,7 +42,6 @@
     z-index: -1;
     opacity: 0;
 
-    
     background-size: cover;
     background-repeat: no-repeat;
     // img {
@@ -62,11 +61,30 @@
     background-image: url('../img/popup-aspirant.jpg');
   }
 
-  &__popup-employer {background-image: url('../img/popup-employer.jpg');}
+  &__popup-employer {
+    background-image: url('../img/popup-employer.jpg');
+  }
+
+  @media screen and (max-width: 1440px) {
+    &__title {
+      max-width: unset;
+      margin: 0 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1350px) {
+    .br--decoy {
+      display: none;
+    }
+  }
 
   @media screen and (max-width: 1024px) {
     &__wrapper {
       width: calc(100% - 15.75rem);
+    }
+
+    .br--decoy {
+      display: initial;
     }
   }
 
@@ -123,7 +141,6 @@
   }
 
   @media screen and (max-width: 375px) {
-
     &__wrapper {
       width: calc(100% - 5.383rem);
       margin: 2.5rem auto 0 1.25rem;

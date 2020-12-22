@@ -98,7 +98,19 @@
     width: 40%;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1350px) {
+    .left-content {
+      &__image img {
+        max-width: 24rem;
+      }
+    }
+
+    .right-content {
+      padding-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1165px) {
     &__wrapper {
       padding-bottom: 2rem;
     }

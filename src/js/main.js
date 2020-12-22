@@ -38,11 +38,17 @@ new Swiper('.swiper-events', {
       loopedSlides: 1,
       spaceBetween: 200
     },
-    768: {
+    769: {
+      // slidesPerView: 'auto',
+      slidesPerGroup: 1,
+      loopedSlides: 2,
+      spaceBetween: 50
+    },
+    1025: {
       slidesPerView: 3,
       slidesPerGroup: 1,
-      loopedSlides: 1,
-      spaceBetween: 50
+      loopedSlides: 2,
+      spaceBetween: 20
     }
   }
 })

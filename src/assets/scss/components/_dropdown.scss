@@ -148,7 +148,31 @@
 
   @media screen and (min-width: 768px) {
     &__item {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__footer {
+      max-width: initial;
+    }
+
+    &__menu {
+      max-height: 550px;
+    }
+
+    &__contacts {
+      flex: 9 1 auto;
+      align-items: flex-end;
+    }
+
+    &__social {
+      flex: 1 1;
+      margin: 0 2rem 0 3.6875rem;
+    }
+
+    &__menu {
+      max-height: 700px;
     }
   }
 }
