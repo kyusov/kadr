@@ -2,9 +2,9 @@ $border-burger: 0.125rem solid $color-main;
 
 .sidebar {
   position: fixed;
-  width: 7.375rem;
+  width: 7.29rem;
   height: 100vh;
-  border-left: 0.063rem solid $color-main;
+  border-left: 2px solid $color-main;
 
   background-color: $color-bg-white;
 
@@ -126,7 +126,7 @@ $border-burger: 0.125rem solid $color-main;
   height: 100vh;
   top: 0;
   left: 50%;
-  border-right: 0.063rem solid $color-main;
+  border-right: 2px solid $color-main;
 }
 
 @keyframes arrow-top {

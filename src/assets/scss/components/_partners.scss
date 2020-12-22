@@ -1,9 +1,9 @@
 .partners {
-  background-color: $color-main;
 
   &__wrapper {
     width: calc(100% - 14.75rem);
     margin: 0 auto;
+    background-color: $color-main;
   }
 
   &__title {
@@ -154,7 +154,7 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1225px) {
     &__container {
       flex-direction: column;
     }

@@ -1,9 +1,10 @@
 .contacts {
-  background-color: $color-bg-white;
+  
   &__wrapper {
-    width: calc(100% - 9rem);
+    width: calc(100% - 14.75rem);
     margin: 0 auto;
     padding-bottom: 5.25rem;
+    background-color: $color-bg-white;
   }
 
   &__title {
@@ -15,17 +16,14 @@
 
     padding-top: 2.063rem;
     // margin-left: 1.125rem;
-    margin: 0 auto;
-
-    width: calc(100% - 9rem);
+    margin-left: 1.875rem;
   }
 
   &__content {
     display: flex;
     color: $color-text;
 
-    width: calc(100% - 9rem);
-    margin: 4.375rem auto 0 auto;
+    margin: 4.375rem auto 0 1.875rem;
   }
 
   &__left,
@@ -195,8 +193,7 @@
 
   &__links {
     display: flex;
-    margin: 4.688rem auto 0 auto;
-    width: calc(100% - 9rem);
+    margin: 4.688rem auto 0 1.875rem;
   }
 
   .links {
@@ -249,7 +246,7 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1225px) {
     &__wrapper {
       width: calc(100% - 14.75rem);
       margin: 0 auto;
