@@ -223,6 +223,8 @@
   }
 
   @media screen and (max-width: 480px) {
+    background-color: $color-main;
+    
     &__wrapper {
       width: calc(100% - 6.25rem);
       margin: 0 auto 0 1.25rem;
