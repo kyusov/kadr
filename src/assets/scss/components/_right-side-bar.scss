@@ -123,7 +123,7 @@ $border-burger: 0.125rem solid $color-main;
 .center-line {
   position: fixed;
   z-index: -4;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 50%;
   border-right: 2px solid $color-main;
@@ -181,7 +181,7 @@ $border-burger: 0.125rem solid $color-main;
   }
 
   .center-line {
-    height: 100%;
+    display: none;
   }
 
   .burger-wrapper {
@@ -195,10 +195,6 @@ $border-burger: 0.125rem solid $color-main;
 
 
 @media screen and (max-width: 425px) {
-  .center-line {
-    display: none;
-  }
-
   .sidebar {
     width: 4.2rem;
 
