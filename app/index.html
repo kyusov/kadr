@@ -99,7 +99,9 @@
                         себя реализации этих идей. Мы знаем - нам по плечу создать более честную и справедливую систему рабочих
                         взаимоотношений в компаниях наших партнёров.
                     </p>
-                    <button class="team__button" href="career.html">Карьера у нас</button>
+                </div>
+                <div class="team__link-wrapper">
+                    <a class="team__button" href="career.html">Карьера у нас</a>
                 </div>
             </div>
             <div class="team__right">
@@ -454,6 +456,35 @@
 </div>
 
 <div class="center-line"></div>
+    <div class="modal">
+    <div class="modal__header">
+        <div class="modal__close">
+            <!-- <span></span> -->
+        </div>
+    </div>
+    <form action="" class="modal__form modal-form">
+        <label for="form-name">Ваше имя</label>
+        <input type="text" name="name" id="form-name" class="modal-form__name" required placeholder="Константин Константинович">
+        
+        <label for="form-email">Email</label>
+        <input type="email" name="email" id="form-email" class="modal-form__email" required placeholder="email@yandex.ru">
+        
+        <label for="phone">Телефон</label>
+        <input type="tel" name="phone" id="phone" required placeholder="+7 999 999 99 99">
+        
+        <label for="message">Сообщение</label>
+        <textarea name="message" id="message" placeholder="Привет"></textarea>
+
+        <label class="modal-form__consent">
+            <input type="checkbox" name="consent" id="form-consent">
+            <span>Я согласен на <a class="consent-desktop" href="#">Обработку персональных данных</a> <div class="consent-mobile">обработку персональных <a href="#">данных</a></div></span>
+        </label>
+
+        <button type="submit" class="modal-form__submit">Отправить</button>
+    </form>
+</div>
+
+<div class="overlay"></div>
 </body>
 
 </html>

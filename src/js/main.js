@@ -1,5 +1,6 @@
 import { Swiper, Pagination, Navigation } from 'swiper'
 import './burger'
+import './modal'
 
 const DG = require('2gis-maps')
 
