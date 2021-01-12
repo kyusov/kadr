@@ -203,23 +203,6 @@
       padding: 0;
       line-height: 1.4;
     }
-
-    &__item {
-      font-size: 1.7rem;
-    }
-
-    &__buttons {
-      padding-left: 0;
-    }
-
-    &__worksheet,
-    &__summary {
-      width: 95%;
-    }
-
-    &__summary {
-      margin-top: 1rem;
-    }
   }
 
   @media screen and (max-width: 375px) {
