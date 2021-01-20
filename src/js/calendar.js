@@ -41,9 +41,9 @@ const createSwiper = () => {
 const drawDays = (year, events) => {
   let arr = [[], [], [], [], []]
   const eventDates = []
-  const month = new Date().getMonth() - 1
+  const month = 9//new Date('2020').getMonth() - 1
 
-  console.log(events)
+  console.log(events ? 'ok' : 'data error')
 
   for (let i = 0; i < events.length; i++) {
     let prettyMonth = events[i].date.split('-')[1]

@@ -4,6 +4,7 @@ const burgerHandler = (dropdown, event) => {
     : event.target.parentElement
 
   const spans = [...parent.children]
+  
 
   if (!parent.classList.contains('active')) {
     parent.classList.toggle('active')
@@ -17,8 +18,8 @@ const burgerHandler = (dropdown, event) => {
 
     parent.style.borderColor = 'white'
 
-    spans[0].style.bottom = '1.255rem'
-    spans[2].style.top = '1.255rem'
+    spans[0].style.top = '50%'
+    spans[2].style.top = '50%'
     
     setTimeout(() => {
       spans[0].style.transform = 'rotate(45deg)'
@@ -41,8 +42,11 @@ const burgerHandler = (dropdown, event) => {
     spans[2].style.transform = 'rotate(0deg)'
 
     setTimeout(() => {
-      spans[0].style.bottom = '0.875rem'
-      spans[2].style.top = '0.875rem'
+      spans[0].style.top = 'calc(50% - 7px)'
+      spans[2].style.top = 'calc(50% + 7px)'
+
+      spans[0].style.transform = 'translate3d(0, -50%, 0)'
+      spans[2].style.transform = 'translate3d(0, -50%, 0)'
     }, 500)
   }
 }

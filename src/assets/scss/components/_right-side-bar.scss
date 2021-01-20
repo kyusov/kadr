@@ -101,22 +101,27 @@ $border-burger: 0.125rem solid $color-main;
 
     span {
       position: absolute;
-      max-width: 1.688rem;
-      width: 100%;
-      height: 0.125rem;
+
+      width: 60%;
+      height: 2px;
       display: block;
       background-color: $color-main;
 
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+
       transition: transform 0.4s ease, background-color 0.4s ease,
-        opacity 0.2s ease, margin 0.5s ease, top 0.3s ease, bottom 0.3s ease;
+      opacity 0.2s ease, margin 0.5s ease, top 0.3s ease, bottom 0.3s ease;
+
 
       &:first-child {
-        bottom: 0.875rem;
+        top: calc(50% - 7px);
       }
+
       &:last-child {
-        top: 0.875rem;
+        top: calc(50% + 7px);
       }
-    }
+    }  
   }
 }
 
@@ -193,7 +198,6 @@ $border-burger: 0.125rem solid $color-main;
   }
 }
 
-
 @media screen and (max-width: 425px) {
   .sidebar {
     width: 4.2rem;
@@ -215,10 +219,6 @@ $border-burger: 0.125rem solid $color-main;
 
   .burger-wrapper {
     width: 4.2rem;
-
-    .burger span {
-      height: 2px;
-    }
   }
 }
 
