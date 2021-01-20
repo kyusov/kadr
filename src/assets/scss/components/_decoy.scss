@@ -118,6 +118,10 @@
       display: none;
     }
 
+    &__title {
+      margin-left: 0;
+    }
+
     &__wrapper {
       width: calc(100% - 6.25rem);
       margin: 10rem auto 0 $margin-480;
