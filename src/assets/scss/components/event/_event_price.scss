@@ -227,6 +227,14 @@ $width-1024: calc(100% - 15rem);
     }
   }
 
+  @media screen and (max-width: 480px) {
+    margin-left: 1.25rem;
+
+    &__left, &__right {
+      margin-left: 0;
+    }
+  }
+
   @media screen and (max-width: 425px) {
     width: $width-425;
     margin: 0 auto 0 1.25rem;
@@ -535,6 +543,21 @@ $width-1024: calc(100% - 15rem);
     }
   }
 
+  @media screen and (max-width: 480px) {
+    margin-left: 1.25rem;
+
+    &__left, &__right {
+      margin-left: 0;
+    }
+
+    &__description-wrapper {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   @media screen and (max-width: 425px) {
     width: $width-425;
 
@@ -803,6 +826,13 @@ $width-1024: calc(100% - 15rem);
     }
   }
 
+  @media screen and (max-width: 480px) {
+    margin-left: 1.25rem;
+    &__card {
+      margin: 0;
+    }
+  }
+
   @media screen and (max-width: 425px) {
     width: $width-425;
     margin: 0 auto 0 1.25rem;
@@ -1000,6 +1030,12 @@ $width-1024: calc(100% - 15rem);
   }
 
   @media screen and (max-width: 480px) {
+    margin-left: 1.25rem;
+    &__prev, &__next {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
     &__button-next,
     &__button-prev {
       font-size: 2.5rem;
