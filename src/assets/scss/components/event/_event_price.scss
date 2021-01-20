@@ -1,6 +1,7 @@
 $width-375: calc(100% - 6rem);
 $width-425: calc(100% - 7rem);
 $width-768: calc(100% - 9.85rem);
+$width-1024: calc(100% - 15rem);
 
 .main-info {
   width: calc(100% - 14.75rem);
@@ -88,6 +89,94 @@ $width-768: calc(100% - 9.85rem);
       left: 0;
       transform: translate(0, -50%);
     }
+  }
+
+  @media screen and (max-width: 1225px) {
+    &__title {
+      font-size: 2rem;  
+    }
+
+    &__bottom-img, &__top-img {
+      width: 85%;
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    &__title {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: $width-1024;
+
+    &__left {
+      margin-left: 0;
+      padding-left: 1.25rem;
+    }
+
+    &__right {
+      padding-right: 0;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    &__description {
+      font-size: 1rem;
+      padding-right: 0.5rem;
+    }
+
+    &__bottom-img,
+    &__top-img {
+      position: static;
+      width: 90%;
+    }
+
+    &__top-img {
+      width: 85%;
+    }
+
+    picture {
+      position: relative;
+      &:nth-child(2) {
+        bottom: 9rem;
+        left: 2.25rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 975px) {
+    flex-direction: column;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      max-width: unset;
+      width: 95%;
+    }
+
+    &__right, &__left {
+      width: 100%;
+    }
+
+    &__right {
+      margin-left: 1.25rem;
+    }
+
+    picture {
+      width: 95%;
+
+      &:nth-child(2) {
+        left: 4rem;
+      }
+    }
+    
   }
 
   @media screen and (max-width: 768px) {
@@ -317,6 +406,81 @@ $width-768: calc(100% - 9.85rem);
     }
   }
 
+  @media screen and (max-width: 1350px) {
+    &__top-img {
+      left: 3.75rem;
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    &__top-img {
+      left: 2.75rem;
+    }
+  }
+
+  @media screen and (max-width: 1165px) {
+    &__description-wrapper {
+      padding-left: .5rem;
+    }
+  }
+
+  @media screen and (max-width: 1225px) {
+    &__top-img, &__bottom-img {
+      width: 85%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: $width-1024;
+
+    &__bottom-img,
+    &__top-img {
+      position: static;
+      width: 90%;
+    }
+
+    &__right {
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      justify-content: unset;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &__description-wrapper p:first-child {
+      margin-top: 0;
+    }
+
+    picture {
+      position: relative;
+      &:nth-child(2) {
+        bottom: 9rem;
+        left: 1.25rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 975px) {
+    flex-direction: column-reverse;
+
+    &__left, &__right {
+      width: 100%;
+    }
+
+    &__left {
+      margin-top: 4rem;
+    }
+
+    &__description-wrapper {
+      max-width: unset;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     width: $width-768;
     margin-top: 0;
@@ -327,6 +491,10 @@ $width-768: calc(100% - 9.85rem);
     &__right {
       width: 100%;
       margin: 0;
+    }
+
+    &__right {
+      justify-content: center;
     }
 
     &__left {
@@ -576,6 +744,16 @@ $width-768: calc(100% - 9.85rem);
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    width: $width-1024;
+  }
+
+  @media screen and (max-width: 950px) {
+    &__card {
+      margin: 0 .5rem;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     width: $width-768;
     margin-top: 0;
@@ -746,6 +924,32 @@ $width-768: calc(100% - 9.85rem);
     left: 1.5rem;
   }
 
+  @media screen and (max-width: 1024px) {
+    width: $width-1024;
+
+    &__prev, &__next {
+      width: 45%;
+    }
+
+    &__prev {
+      margin-left: 1rem;
+    }
+
+    &__next {
+      margin-right: 1rem;
+    }
+
+    &__button-next, &__button-prev {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 975px) {
+    &__button-next, &__button-prev {
+      font-size: 2rem;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     width: $width-768;
     margin: 5rem auto 0 auto;
@@ -796,7 +1000,8 @@ $width-768: calc(100% - 9.85rem);
   }
 
   @media screen and (max-width: 480px) {
-    &__button-next, &__button-prev {
+    &__button-next,
+    &__button-prev {
       font-size: 2.5rem;
     }
   }
