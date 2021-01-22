@@ -175,4 +175,14 @@
       max-height: 700px;
     }
   }
+
+  @media (max-height: 815px) {
+    &__contacts a {
+      font-size: 1rem;
+    }
+
+    &__footer {
+      margin-top: 1rem;
+    }
+  }
 }
