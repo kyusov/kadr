@@ -141,3 +141,20 @@ const arrowHandler = () => {
 }
 
 document.querySelector('.sidebar__arrow-top').addEventListener('click', arrowHandler)
+
+/// anchors
+window.onload = () => {
+  window.onhashchange = () => {
+    window.scrollTo({
+      top: document.querySelector(`.${window.location.hash.substring(1)}`).offsetTop,
+      behavior: 'smooth'
+    })
+  }
+  
+  if (window.location.hash) {
+    window.scrollTo({
+      top: document.querySelector(`.${window.location.hash.substring(1)}`).offsetTop,
+      behavior: 'smooth'
+    })
+  }
+}

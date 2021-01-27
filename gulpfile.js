@@ -108,7 +108,8 @@ const scripts = () => {
           'calendar': './src/js/calendar.js',
           'event': './src/js/event.js',
           'burger': './src/js/burger.js',
-          'career': './src/js/career.js'
+          'career': './src/js/career.js',
+          'links': './src/js/links.js'
         },
         output: {
           filename: '[name].js',

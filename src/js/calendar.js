@@ -43,7 +43,7 @@ const drawDays = (year, events) => {
   const eventDates = []
   const month = 9//new Date('2020').getMonth() - 1
 
-  console.log(events ? 'ok' : 'data error')
+  // console.log(events ? 'ok' : 'data error')
 
   for (let i = 0; i < events.length; i++) {
     let prettyMonth = events[i].date.split('-')[1]
@@ -108,7 +108,7 @@ const drawDays = (year, events) => {
 
     arr[i][k] = td
 
-    if (k == 6) {
+    if (k === 6) {
       k = -1
       i++
     }
