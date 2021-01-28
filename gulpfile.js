@@ -95,6 +95,7 @@ const imgToApp = () => {
     './src/assets/img/**/**.png',
     './src/assets/img/**/**.jpeg',
     './src/assets/img/**/**.webp',
+    './src/assets/img/**/**.gif',
   ]).pipe(dest('./app/img'))
 }
 
@@ -109,7 +110,8 @@ const scripts = () => {
           'event': './src/js/event.js',
           'burger': './src/js/burger.js',
           'career': './src/js/career.js',
-          'links': './src/js/links.js'
+          'aspirant': './src/js/aspirant.js',
+          'employer': './src/js/employer.js'
         },
         output: {
           filename: '[name].js',
