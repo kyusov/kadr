@@ -41,16 +41,11 @@
     line-height: 3.5rem;
     text-transform: uppercase;
     color: transparent;
-    
-
-    
 
     &:not(:first-child) {
       margin-top: 2rem;
     }
 
-    
-    
     a {
       text-decoration: none;
       color: transparent;
@@ -185,13 +180,24 @@
     }
   }
 
-  @media (max-height: 815px) {
+  @media screen and (max-height: 815px) {
     &__contacts a {
       font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    &__social {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-right: 7px;
+      a:not(:first-child) {
+        margin-left: 10px;
+      }
     }
 
     &__footer {
       margin-top: 1rem;
+      height: 3.5rem;
     }
   }
 }

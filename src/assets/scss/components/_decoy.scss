@@ -58,11 +58,14 @@
   }
 
   &__popup-aspirant {
-    background-image: url('../img/popup-aspirant.jpg');
+    // background-image: url('../img/popup-aspirant.jpg');
+    background-image: url('../img/gifs/office1.gif');
+    background-position: 75% center;
   }
 
   &__popup-employer {
-    background-image: url('../img/popup-employer.jpg');
+    background-image: url('../img/gifs/office2.gif');
+    background-position: center center;
   }
 
   @media screen and (max-width: 1440px) {
