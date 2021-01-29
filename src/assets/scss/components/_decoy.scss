@@ -101,6 +101,15 @@
       font-size: 3rem;
       line-height: 1.6;
     }
+
+    &__popup-aspirant,
+    &__popup-employer {
+      width: 20rem;
+      height: 25rem;
+
+      top: 50%;
+      left: 50%;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -117,6 +126,16 @@
   }
 
   @media screen and (max-width: 480px) {
+    &__popup-aspirant,
+    &__popup-employer {
+      width: 15rem;
+      height: 17rem;
+
+      top: 40%;
+      left: 40%;
+    }
+
+
     .br--decoy {
       display: none;
     }
