@@ -70,14 +70,14 @@
   &__gradient-bottom {
     bottom: -1px;
     background: linear-gradient(
-      270deg,
-      rgba(212, 15, 20, 0) 0%,
-      rgba(212, 15, 20, 1) 100%
+      90deg,
+      rgba(212, 15, 20, 1) 0%,
+      rgba(212, 15, 20, 0) 100%
     );
     background: -webkit-linear-gradient(
-      270deg,
-      rgba(212, 15, 20, 0) 0%,
-      rgba(212, 15, 20, 1) 100%
+      90deg,
+      rgba(212, 15, 20, 1) 0%,
+      rgba(212, 15, 20, 0) 100%
     );
   }
 
