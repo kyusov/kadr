@@ -160,10 +160,6 @@
           transition: stroke 0.4s ease;
         }
         &:hover {
-          path {
-            transition: stroke 0.4s ease;
-            stroke: white;
-          }
           cursor: pointer;
         }
       }
