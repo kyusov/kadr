@@ -1,10 +1,10 @@
-import { Swiper, Pagination, Navigation } from 'swiper'
+import { Swiper, Pagination, Navigation, Mousewheel } from 'swiper'
 import './burger'
 import './modal'
 import './map'
 
 
-Swiper.use([Pagination, Navigation])
+Swiper.use([Pagination, Navigation, Mousewheel])
 
 new Swiper('.swiper-events', {
   loop: true,
@@ -15,6 +15,7 @@ new Swiper('.swiper-events', {
   centeredSlides: true,
   spaceBetween: 20,
   grabCursor: true,
+  mousewheelControl: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -59,8 +60,13 @@ new Swiper('.partners-swiper', {
   slidesPerView: 'auto',
   centeredSlides: true,
   spaceBetween: 102,
+  grabCursor: true,
   updateOnWindowResize: true,
   speed: 400,
+  mousewheel: {
+    eventsTarget: '.partners-swiper',
+    releaseOnEdges: true,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
   },
