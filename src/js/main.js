@@ -3,14 +3,13 @@ import './burger'
 import './modal'
 import './map'
 
-
 Swiper.use([Pagination, Navigation, Mousewheel])
 
 new Swiper('.swiper-events', {
   loop: true,
   updateOnWindowResize: true,
   speed: 400,
-  slidesPerView : 3,
+  slidesPerView: 3,
   slidesPerGroup: 3,
   centeredSlides: true,
   spaceBetween: 20,
@@ -32,27 +31,27 @@ new Swiper('.swiper-events', {
       slidesPerView: 'auto',
       slidesPerGroup: 1,
       loopedSlides: 1,
-      spaceBetween: 50
+      spaceBetween: 50,
     },
     640: {
       slidesPerView: 'auto',
       slidesPerGroup: 1,
       loopedSlides: 1,
-      spaceBetween: 200
+      spaceBetween: 200,
     },
     769: {
       // slidesPerView: 'auto',
       slidesPerGroup: 1,
       loopedSlides: 2,
-      spaceBetween: 50
+      spaceBetween: 50,
     },
     1025: {
       slidesPerView: 3,
       slidesPerGroup: 1,
       loopedSlides: 2,
-      spaceBetween: 20
-    }
-  }
+      spaceBetween: 20,
+    },
+  },
 })
 
 new Swiper('.partners-swiper', {
@@ -72,15 +71,15 @@ new Swiper('.partners-swiper', {
   },
   breakpoints: {
     319: {
-      spaceBetween: 102
+      spaceBetween: 102,
     },
     420: {
-      spaceBetween: 70
+      spaceBetween: 70,
     },
     640: {
-      spaceBetween: 30
-    }
-  }
+      spaceBetween: 30,
+    },
+  },
 })
 
 /// hover main title
@@ -100,14 +99,8 @@ const popupWindows = [
 
 const spans = [...document.querySelectorAll('.decoy__title span')]
 for (let i = 0; i < spans.length; i++) {
-  spans[i].addEventListener(
-    'mouseenter',
-    popupShow.bind(this, 'active', popupWindows[i])
-  )
-  spans[i].addEventListener(
-    'mouseleave',
-    popupHide.bind(this, 'active', popupWindows[i])
-  )
+  spans[i].addEventListener('mouseenter', popupShow.bind(this, 'active', popupWindows[i]))
+  spans[i].addEventListener('mouseleave', popupHide.bind(this, 'active', popupWindows[i]))
 }
 
 /// hover main title end
@@ -117,7 +110,7 @@ for (let i = 0; i < spans.length; i++) {
 const arrowHandler = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 
@@ -125,17 +118,30 @@ document.querySelector('.sidebar__arrow-top').addEventListener('click', arrowHan
 
 /// anchors
 window.onload = () => {
+  const burgerLinks = [...document.querySelectorAll('.dropdown__item a')].filter((e) => {
+    if (e.getAttribute('href').includes('#')) return e
+  })
+
+  for (let i = 0; i < burgerLinks.length; i++) {
+    burgerLinks[i].addEventListener('click', () => {
+      if (document.querySelector('.dropdown').style.transform.includes('0px')) {
+        const burger = document.querySelector('.burger')
+        burger.dispatchEvent(new Event('click'))
+      }
+    })
+  }
+
   window.onhashchange = () => {
     window.scrollTo({
       top: document.querySelector(`.${window.location.hash.substring(1)}`).offsetTop,
-      behavior: 'smooth'
+      behavior: 'smooth',
     })
   }
-  
+
   if (window.location.hash) {
     window.scrollTo({
       top: document.querySelector(`.${window.location.hash.substring(1)}`).offsetTop,
-      behavior: 'smooth'
+      behavior: 'smooth',
     })
   }
 }

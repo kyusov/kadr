@@ -1,6 +1,11 @@
 .decoy {
   width: 100%;
 
+  a {
+    text-decoration: none;
+    color: transparent;
+  }
+
   &__wrapper {
     // max-width: 75.25rem;
     position: relative;

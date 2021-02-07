@@ -1,3 +1,10 @@
+///modal
+
+import './modal'
+
+///
+
+
 /// gifs
 
 const gifs = [...document.querySelectorAll('.aspirant-info__titles > img')]

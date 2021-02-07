@@ -27,7 +27,9 @@ const open = () => {
 
 const closeBtn = document.querySelector('.modal__close')
 const openBtn = document.querySelector('.about__right button')
+const openResume = document.querySelector('.aspirant-info__summary')
 
 overlay.addEventListener('click', close)
 closeBtn.addEventListener('click', close)
-openBtn.addEventListener('click', open)
+openBtn ? openBtn.addEventListener('click', open) : null
+openResume ? openResume.addEventListener('click', open) : null
