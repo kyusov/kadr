@@ -62,6 +62,7 @@ new Swiper('.partners-swiper', {
   grabCursor: true,
   updateOnWindowResize: true,
   speed: 400,
+  touchReleaseOnEdges: true,
   mousewheel: {
     eventsTarget: '.partners-swiper',
     releaseOnEdges: true,

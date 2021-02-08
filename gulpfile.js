@@ -246,6 +246,5 @@ const stylesBuild = () => {
 exports.build = series(
   clean,
   parallel(htmlInclude, scriptsBuild, fonts, imgToApp, svgSprites),
-  stylesBuild,
-  tinypng
+  stylesBuild
 )
